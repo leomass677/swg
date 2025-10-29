@@ -1,14 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Header from "./Pages/Header";
+import { video } from "./assets/video";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <h1 className="text-5xl bg-blue-600">Hello World</h1>
+      <Header />
+      {/* <video src={video.AI_medium} controls width="full" /> */}
     </>
   );
 }

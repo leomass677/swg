@@ -2,28 +2,25 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="section-bg">
+    <footer className="">
+      <div className="">
         <img src="/svgs/footer-bg.svg" alt="" />
       </div>
-      <div className="container">
-        <div className="footer__main">
-          <div className="footer__links-section">
+      <div className="">
+        <div className="">
+          <div className="">
             <div>
-              <div className="footer__links">
-                <span className="footer__links__title">About Us</span>
+              <div className="">
+                <span className="">About Us</span>
                 <ul>
                   <li>
-                    <a className="link link--undefined" href="/about-us">
-                      <span className="link__text">About SWG</span>
+                    <a className="" href="/about-us">
+                      <span className="">About SWG</span>
                     </a>
                   </li>
                   <li>
-                    <a
-                      className="link link--undefined"
-                      href="/about-us#history"
-                    >
-                      <span className="link__text">History</span>
+                    <a className="" href="/about-us#history">
+                      <span className="">History</span>
                     </a>
                   </li>
                   {/* ... other list items ... */}
@@ -33,24 +30,24 @@ const Footer = () => {
             {/* Repeat the rest of your sections here, same pattern */}
           </div>
 
-          <div className="footer__newsletter__socials">
-            <div className="footer__newsletter">
-              <span className="footer__newsletter__title">Newsletter</span>
-              <span className="footer__newsletter__description">
+          <div className="">
+            <div className="">
+              <span className="">Newsletter</span>
+              <span className="">
                 Stay Industry-connected with our monthly newsletter written by
                 our editorial team.
               </span>
-              <div className="footer__newsletter__input">
-                <div className="input-container">
+              <div className="">
+                <div className="">
                   <input placeholder="Your email address" />
-                  <span className="search-icon"></span>
+                  <span className=""></span>
                 </div>
               </div>
             </div>
 
-            <div className="footer__socials">
-              <span className="footer__socials__title">Our Socials</span>
-              <div className="footer__socials__icons">
+            <div className="">
+              <span className="">Our Socials</span>
+              <div className="">
                 <a
                   href="https://instagram.com"
                   target="_blank"
@@ -72,18 +69,18 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer__meta">
+        <div className="">
           <div>
-            <div className="footer__meta__brand">
-              <span className="footer__meta__logo">
+            <div className="">
+              <span className="">
                 <img src="/svgs/swg-logo.svg" alt="SWG Logo" />
               </span>
             </div>
-            <div className="footer__meta__copyright">
+            <div className="">
               Copyright © {new Date().getFullYear()} Mag Group Limited
             </div>
           </div>
-          <span className="footer__meta__image">
+          <span className="">
             <img src="/images/footer-image.png" alt="Footer" />
           </span>
         </div>

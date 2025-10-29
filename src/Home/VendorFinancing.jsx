@@ -2,22 +2,22 @@ import React from "react";
 
 const VendorFinancing = () => {
   return (
-    <div class="vendor-financing">
-      <div class="section-bg">
+    <div className="">
+      <div className="">
         <img src="/svgs/vendor-financing-bg.svg" alt="" />
       </div>
-      <div class="container">
-        <div class="vendor-financing__image">
+      <div className="">
+        <div className="">
           <img src="/images/home/vendor-financing.png" alt="" />
         </div>
-        <div class="vendor-financing__content">
-          <h3 class="vendor-financing__title">Zero Cost / Vendor Financing</h3>
-          <span class="vendor-financing__subtitle">
+        <div className="">
+          <h3 className="">Zero Cost / Vendor Financing</h3>
+          <span className="">
             Our unique model of operation ensures that our projects are
             completely financed by vendors, and investments are recovered
             through subscriptions or pay-as-you-go.
           </span>
-          <ul class="vendor-financing__text">
+          <ul className="">
             <li>
               - You do not pay any upfront fees for the solutions we provide
             </li>
@@ -28,13 +28,10 @@ const VendorFinancing = () => {
             </li>
             <li>- Fulfill your extensive ICT needs on a limited ICT budget</li>
           </ul>
-          <a
-            class="link link--white vendor-financing__action link--with-icon"
-            href="/"
-          >
-            <span class="link__icon">
-              <span class="link__icon__shader"></span>
-              <span class="link__icon__arrow_line">
+          <a className="" href="/">
+            <span className="">
+              <span className=""></span>
+              <span className="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20.626"
@@ -45,13 +42,13 @@ const VendorFinancing = () => {
                       d="M.75.75h19.126"
                       fill="none"
                       stroke="#031d44"
-                      stroke-linecap="round"
-                      stroke-width="1.5"
+                      strokeLinecap="round"
+                      strokeWidth="1.5"
                     ></path>
                   </g>
                 </svg>
               </span>
-              <span class="link__icon__arrow_icon">
+              <span className="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="12.121"
@@ -63,16 +60,16 @@ const VendorFinancing = () => {
                         d="m11.061 1.061-5 5-5-5"
                         fill="none"
                         stroke="#031d44"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="1.5"
                       ></path>
                     </g>
                   </g>
                 </svg>
               </span>
             </span>
-            <span class="link__text">Let's work with you</span>
+            <span className="">Let's work with you</span>
           </a>
         </div>
       </div>
