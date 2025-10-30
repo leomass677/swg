@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 // Navigation config
 const navItems = [
   {
-    label: "AbouT US",
+    label: "About US",
     items: [
       { label: "About SWG", href: "/design" },
       { label: "History", href: "/prototyping" },
@@ -86,27 +86,77 @@ const navItems002 = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hover, setIsHover] = useState(false);
 
   return (
-    <div className=" relative">
+    <div className="fixed w-full z-80">
       {/* Header */}
-      <header className="bg-shade shadow-sm  sticky top top-0 left-0 w-full z-50">
+      <header className="bg-shade shadow-sm  sticky top top-0 left-0 w-full z-50  relative">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <img src={icons.logo} alt="" />
+
           {/* Desktop Nav */}
           <div className="px-4 py-3">
-            <ul className="flex justufy-between items-center gap-8 px-12 bg-blue-100/40 backdrop-blur-xs py-1 rounded-4xl">
-              <li className="flex items-center ">
+            {hover && (
+              <div className="fixed left-0 top-[80px] h-screen peer   w-screen bg-shade z-60 grid grid-cols-4 px-[24px] py-[28px] border-t-2 border-grey-400">
+                {navItems.map((nav, key) => (
+                  <ul key={key}>
+                    <h6 className="text-sm text-blue-700  font-medium ">
+                      {nav.label}
+                    </h6>
+                    <div className="flex flex-col gap-2 mt-4">
+                      {" "}
+                      {nav.items.map((item) => (
+                        <a
+                          key={item.label}
+                          href={item.href}
+                          className="block text-gray-700 hover:text-blue-600 text-xs hover:translate-x-2 transition-all duration-500 ease-in-out"
+                        >
+                          {item.label}
+                        </a>
+                      ))}
+                    </div>
+                  </ul>
+                ))}
+                <div className="flex flex-col gap-4">
+                  {navItems002.map((navItem, key) => (
+                    <ul key={key}>
+                      <h6 className="text-sm text-blue-700  font-medium ">
+                        {navItem.label}
+                      </h6>
+                      <div className="mt-4 flex flex-col gap-1">
+                        {" "}
+                        {navItem.items.map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            className="block text-gray-700 hover:text-blue-600 text-xs hover:translate-x-2 transition-all duration-500 ease-in-out"
+                          >
+                            {item.label}
+                          </a>
+                        ))}
+                      </div>
+                    </ul>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="flex justufy-between items-center gap-8 px-12 bg-blue-100/40 backdrop-blur-xs py-1 rounded-4xl">
+              <p className="flex items-center  ">
                 Home <MdOutlineKeyboardArrowRight />
-              </li>
-              <li>
+              </p>
+              <p>
                 <AvailabilityBadge />
-              </li>
-              <li className="flex items-center ">
+              </p>
+              <li
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
+                className="flex items-center "
+              >
                 Menu <MdOutlineKeyboardArrowRight />
-                <div className=""></div>
               </li>
-            </ul>
+            </div>
           </div>
           {/* CTA Button */}
           <a

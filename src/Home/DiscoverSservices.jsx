@@ -88,7 +88,7 @@ const DiscoverSservices = () => {
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative flex flex-col items-center shadow-md max-w-[250px] justify-center text-center gap-6 p-6 rounded-xl text-[12px] border border-gray-200 bg-shade group"
+            className="relative flex flex-col items-center cursor-pointer shadow-md max-w-[250px] justify-center text-center gap-6 p-6 rounded-xl text-[12px] border border-gray-200 bg-shade group"
           >
             <motion.img
               src={items.textImg}
@@ -114,16 +114,14 @@ const DiscoverSservices = () => {
 
             {/* Hover*/}
             <motion.div
-              className="absolute inset-0 flex flex-col items-start justify-center bg-white bg-opacity-90 rounded-xl overflow-hidden text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              className="absolute inset-0 flex flex-col items-center justify-start gap-2 pb-4 bg-white bg-shade rounded-xl overflow-hidden text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
               initial={{ opacity: 0 }}
               whileHover={{ opacity: 1 }}
             >
-              <img
-                src={items.img}
-                alt={items.img}
-                className="w-full h-auto mb-2"
-              />
-              <p>{items.text}</p>
+              <img src={items.img} alt={items.img} className="w-full h-auto" />
+              <p className="text-[12px] md:text-[14px] font-medium leading-tight text-grey-700">
+                {items.text}
+              </p>
             </motion.div>
           </motion.div>
         ))}
