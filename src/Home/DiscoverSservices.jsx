@@ -1,70 +1,70 @@
-import { div, img } from "framer-motion/client";
 import React from "react";
-
+import images from "../assets/images";
+import { motion } from "framer-motion";
 const DiscoverSservices = () => {
   const card = [
     {
       title: "Appliction Service Provider",
-      img: {},
-      linkTo: "",
-      text: "",
-      textImg: {},
+      img: images.application_service,
+      linkTo: "/",
+      text: "Unlock Your Application's Full Potential",
+      textImg: images.application_service_icon,
     },
     {
       title: "IT Consulting",
-      img: {},
+      img: images.it_consulting,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.it_consulting_icon,
     },
     {
       title: "Bespoke Technology Innovation",
-      img: {},
+      img: images.bespoke_tech,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.bespoke_tech_icon,
     },
     {
       title: "Automation Service",
-      img: {},
+      img: images.automaion_service,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.application_service_icon,
     },
     {
       title: "Infrastructure Service",
-      img: {},
+      img: images.infastructure_service,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.infastructure_service_icon,
     },
     {
       title: "Digital Commerce",
-      img: {},
+      img: images.digital_commerce,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.digital_commerce_icon,
     },
     {
       title: "Customer Experience",
-      img: {},
+      img: images.customer_exp,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.customer_exp_icon,
     },
     {
       title: "Security Solutions",
-      img: {},
+      img: images.security_solution,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.security_solution_icon,
     },
     {
       title: "Sustainability Consulting & Solutions",
-      img: {},
+      img: images.sustainability,
       linkTo: "/",
       text: "",
-      textImg: {},
+      textImg: images.sustainability_icon,
     },
   ];
   return (
@@ -80,17 +80,52 @@ const DiscoverSservices = () => {
           technology landscape.
         </p>
       </div>
-      <div>
+      <div className="grid grid-cols-4 gap-6 relative">
         {card.map((items, key) => (
-          <div key={key}>
-            <img src={items.img} alt={items.img} />
-            <p>{items.title}</p>
-            {/* hover */}
-            <div>
-              <img src={items.textImg} alt={items.textImg} />
+          <motion.div
+            key={key}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="relative flex flex-col items-center shadow-md max-w-[250px] justify-center text-center gap-6 p-6 rounded-xl text-[12px] border border-gray-200 bg-shade group"
+          >
+            <motion.img
+              src={items.textImg}
+              alt={items.textImg}
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="max-w-12 h-auto object-center"
+            />
+
+            <motion.p
+              className="text-sm font-medium"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              {items.title}
+            </motion.p>
+
+            {/* shapes */}
+            <div className="absolute -top-0 -left-0 w-10 h-20 bg-blue-400 rounded-tl-2xl -z-10 opacity-0 group-hover:translate-4"></div>
+            <div className="bg-blue-400 w-20 h-20 absolute rounded-tr-xl rounded-bl-xl rounded-xs -z-10 bottom-10 right-10 opacity-0"></div>
+
+            {/* Hover*/}
+            <motion.div
+              className="absolute inset-0 flex flex-col items-start justify-center bg-white bg-opacity-90 rounded-xl overflow-hidden text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+            >
+              <img
+                src={items.img}
+                alt={items.img}
+                className="w-full h-auto mb-2"
+              />
               <p>{items.text}</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>
