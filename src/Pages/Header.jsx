@@ -99,17 +99,12 @@ export default function Header() {
               <li className="flex items-center ">
                 Home <MdOutlineKeyboardArrowRight />
               </li>
+              <li>
+                <AvailabilityBadge />
+              </li>
               <li className="flex items-center ">
                 Menu <MdOutlineKeyboardArrowRight />
-                <div className="">
-                  {navItems.map((item, key) => (
-                    <ul></ul>
-                  ))}
-                </div>
-              </li>
-              <li>
-                {" "}
-                <AvailabilityBadge />
+                <div className=""></div>
               </li>
             </ul>
           </div>

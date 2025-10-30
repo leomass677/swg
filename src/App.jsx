@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 function App() {
   return (
     <main>
-      <Header />
+      <Header className="sticky top-0" />
       <Home />
     </main>
   );

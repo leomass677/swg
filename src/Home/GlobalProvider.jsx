@@ -1,7 +1,7 @@
 import React from "react";
 import { video } from "../assets/video";
 import { motion } from "framer-motion";
-import bgImage from "../assets/icons/breaking_barriers_bg.svg";
+import bgImage from "../assets/images/background001.png";
 import icons from "../assets/icons";
 
 const Global = () => {
@@ -9,11 +9,19 @@ const Global = () => {
   const delay = 0.3;
   const duration = 0.8;
   const hoverScale = 1.08;
+  console.log(bgImage);
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 text-shade">
       <div className="relative overflow-hidden">
-        <video src={video.AI_medium} autoPlay muted loop className=""></video>
+        <video
+          src={video.AI_medium}
+          autoPlay
+          playsInline
+          muted
+          loop
+          className=""
+        ></video>
         <motion.p
           initial={{ opacity: 0, y }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,6 +40,7 @@ const Global = () => {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          opacity: "0.7",
         }}
         className="bg-gradient-softlight p-[120px]"
       >
@@ -61,11 +70,11 @@ const Global = () => {
               </p>
             </div>
             <div className="flex-1 flex flex-col gap-6">
-              <p className="text-3xl leading-snug">
+              <p className="text-sm sm:text-md md:text-lg lg:text-2xl leading-snug">
                 Market-leading presence in Nigeria, USA, Ghana, Sierra Leone,
                 Liberia, South Africa, Uganda, and Sri Lanka.
               </p>
-              <p className="text-lg">
+              <p className="text-md xl:text-lg">
                 Including; Germany, Kenya, Canada, Austria, Sweden, Belgium,
                 Switzerland, Ireland, Spain, South Korea, Japan.
               </p>
@@ -73,9 +82,15 @@ const Global = () => {
             </div>
           </div>
         </div>
-        <div className="mt-14 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }} // start off-screen to the left
+          whileInView={{ opacity: 1, x: 0 }} // animate to center
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 3.6, ease: "easeOut" }}
+          className="mt-14 flex justify-center "
+        >
           <img src={icons.map} alt={icons.map} />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

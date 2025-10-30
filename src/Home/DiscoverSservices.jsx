@@ -1,3 +1,4 @@
+import { div, img } from "framer-motion/client";
 import React from "react";
 
 const DiscoverSservices = () => {
@@ -6,46 +7,64 @@ const DiscoverSservices = () => {
       title: "Appliction Service Provider",
       img: {},
       linkTo: "",
+      text: "",
+      textImg: {},
     },
     {
       title: "IT Consulting",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Bespoke Technology Innovation",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Automation Service",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Infrastructure Service",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Digital Commerce",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Customer Experience",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Security Solutions",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
     {
       title: "Sustainability Consulting & Solutions",
       img: {},
       linkTo: "/",
+      text: "",
+      textImg: {},
     },
   ];
   return (
@@ -60,6 +79,19 @@ const DiscoverSservices = () => {
           clients have the right resources to keep up with today’s ever-evolving
           technology landscape.
         </p>
+      </div>
+      <div>
+        {card.map((items, key) => (
+          <div key={key}>
+            <img src={items.img} alt={items.img} />
+            <p>{items.title}</p>
+            {/* hover */}
+            <div>
+              <img src={items.textImg} alt={items.textImg} />
+              <p>{items.text}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

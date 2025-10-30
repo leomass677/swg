@@ -9,7 +9,7 @@ import { FaDragon } from "react-icons/fa";
 const Hero = () => {
   return (
     <div className="flex justify-between px-3 sm:px-4 md:px-6 lg:px-11 w-full max-w-7xl mx-auto">
-      <div className="flex-1 flex items-end-safe text-5xl font-Roboto text-gray-800 font-semibold ">
+      <div className="flex-1 flex items-end-safe text-5xl font-Roboto text-gray-800 font-semibold md:pb-10">
         <h1> Powering Digital Transformation in Africa and Beyond</h1>
       </div>
       <div className="flex-1 flex justify-end">
