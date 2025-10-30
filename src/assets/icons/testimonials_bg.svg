@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1441" height="816" viewBox="0 0 1441 816">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.393" cy="0.716" r="0.622" gradientTransform="matrix(0.46, 0.888, -0.448, 0.232, 0.533, 0.2)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4dc8ee"/>
+      <stop offset="1" stop-color="#031d44" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.298" cy="0.622" r="0.68" gradientTransform="matrix(0.365, 0.931, -0.55, 0.216, 0.603, 0.271)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8a42f9"/>
+      <stop offset="1" stop-color="#031d44" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_114627" data-name="Group 114627" transform="translate(0 -6871)">
+    <rect id="Rectangle_47121" data-name="Rectangle 47121" width="1441" height="816" transform="translate(0 6871)" fill="#031d44"/>
+    <rect id="Rectangle_47006" data-name="Rectangle 47006" width="1441" height="816" transform="translate(0 6871)" fill="#031d44"/>
+    <rect id="Rectangle_47667" data-name="Rectangle 47667" width="1441" height="816" transform="translate(0 6871)" fill="url(#radial-gradient)"/>
+    <rect id="Rectangle_47666" data-name="Rectangle 47666" width="1440" height="816" transform="translate(0 6871)" fill="url(#radial-gradient-2)"/>
+  </g>
+</svg>

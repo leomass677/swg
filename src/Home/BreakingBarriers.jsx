@@ -2,7 +2,7 @@ import React from "react";
 
 const BreakingBarriers = () => {
   return (
-    <div className="">
+    <div className="flex">
       Breaking barriers &amp; delivering value for 10+ years.
     </div>
   );

@@ -1,43 +1,85 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-
+import AvailabilityBadge from "../Animation/AvailabilityBadge";
+import { label, path, ul } from "framer-motion/client";
+import icons from "../assets/icons";
+import { NavLink } from "react-router-dom";
 // Navigation config
 const navItems = [
   {
-    label: "Product",
+    label: "AbouT US",
     items: [
-      { label: "Design", href: "/design" },
-      { label: "Prototyping", href: "/prototyping" },
-      { label: "Collaboration", href: "/collaboration" },
-      { label: "Developer Handoff", href: "/handoff" },
-      { label: "Design Systems", href: "/design-systems" },
-      { label: "Plugins", href: "/plugins" },
-      { label: "Integrations", href: "/integrations" },
+      { label: "About SWG", href: "/design" },
+      { label: "History", href: "/prototyping" },
+      { label: "Vision, Mission & Values", href: "/collaboration" },
+      { label: "People, Performance & Culture", href: "/handoff" },
+      { label: "How We Operate", href: "/design-systems" },
+      { label: "Publications", href: "/plugins" },
+      { label: "The Team", href: "/integrations" },
+      { label: "Partners & Affiliates", href: "/plugins" },
+      { label: "Our Global Footprint", href: "/integrations" },
     ],
   },
   {
-    label: "Resources",
+    label: "Services",
     items: [
-      { label: "Blog", href: "/blog" },
-      { label: "Community", href: "/community" },
-      { label: "Support", href: "/support" },
-      { label: "Docs", href: "/docs" },
-      { label: "Webinars", href: "/webinars" },
-      { label: "Templates", href: "/templates" },
-      { label: "Events", href: "/events" },
+      { label: "Digital Commerce", href: "/design" },
+      { label: "IT Consulting", href: "/prototyping" },
+      { label: "Application Service Provider", href: "/collaboration" },
+      { label: "Automation Service", href: "/handoff" },
+      { label: "Customer Experience", href: "/design-systems" },
+      { label: "Infrastructure Service", href: "/plugins" },
+      { label: "Security Solutions", href: "/integrations" },
+      { label: "Sustainablity Consulting & Solutions", href: "/plugins" },
+      { label: "Bespoke Technology Innovation", href: "/integrations" },
+    ],
+  },
+
+  {
+    label: "Products",
+    items: [
+      { label: "E-Immigration Portaln", href: "/design" },
+      { label: "Automated Driving License Solution", href: "/prototyping" },
+      { label: "Entrust", href: "/collaboration" },
+      { label: "Membership Management Solution", href: "/handoff" },
+      { label: "Resource Planning System", href: "/design-systems" },
+      { label: "The Smart Crowdfunding Solution", href: "/plugins" },
+      { label: "Hobo", href: "/integrations" },
+      { label: "Integrated Tax Management Solution", href: "/integrations" },
+      { label: "Hrmis", href: "/integrations" },
+      { label: "Integrated Postal Management System", href: "/integrations" },
+      { label: "Souk Place", href: "/integrations" },
+    ],
+  },
+];
+
+const navMenu = [
+  { label: "Home", path: "/" },
+  { label: Menu, path: "/" },
+];
+
+const navItems002 = [
+  {
+    label: "Industries",
+    items: [
+      { label: "Private Sector", href: "/blog" },
+      { label: "Public Sector", href: "/community" },
     ],
   },
   {
-    label: "Company",
+    label: "Careers",
     items: [
-      { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Press", href: "/press" },
-      { label: "Newsroom", href: "/newsroom" },
-      { label: "Contact", href: "/contact" },
-      { label: "Security", href: "/security" },
-      { label: "Legal", href: "/legal" },
+      { label: "Jobs", href: "/about" },
+      { label: "Alumni & Intenship Program", href: "/careers" },
+      { label: "Our Talent Network", href: "/press" },
+    ],
+  },
+  {
+    label: "Insights",
+    items: [
+      { label: "Case Studies", href: "/about" },
+      { label: "Blog", href: "/careers" },
     ],
   },
 ];
@@ -46,42 +88,35 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" relative">
       {/* Header */}
-      <header className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+      <header className="bg-shade shadow-sm  sticky top top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="text-xl font-bold text-gray-900">FigmaClone</div>
-
+          <img src={icons.logo} alt="" />
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-700 relative bg-[#cddff0] rounded-4xl px-4 py-2">
-            {navItems.map((nav) => (
-              <div key={nav.label} className="group relative">
-                <button className="hover:text-blue-600  transition flex items-center gap-px group">
-                  {nav.label}
-                  <MdOutlineKeyboardArrowRight className="group-hover:rotate-90 transition-all duration-300" />
-                </button>
-
-                {/* Dropdown */}
-                <div className="absolute left-0 top-full mt-2 hidden group-hover:flex bg-white shadow-lg rounded-md p-4 w-64 flex-col space-y-2 z-50">
-                  {nav.items.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="text-gray-700 hover:text-blue-600 transition text-sm"
-                    >
-                      {item.label}
-                      <MdOutlineKeyboardArrowRight />
-                    </a>
+          <div className="px-4 py-3">
+            <ul className="flex justufy-between items-center gap-8 px-12 bg-blue-100/40 backdrop-blur-xs py-1 rounded-4xl">
+              <li className="flex items-center ">
+                Home <MdOutlineKeyboardArrowRight />
+              </li>
+              <li className="flex items-center ">
+                Menu <MdOutlineKeyboardArrowRight />
+                <div className="">
+                  {navItems.map((item, key) => (
+                    <ul></ul>
                   ))}
                 </div>
-              </div>
-            ))}
-          </nav>
-
+              </li>
+              <li>
+                {" "}
+                <AvailabilityBadge />
+              </li>
+            </ul>
+          </div>
           {/* CTA Button */}
           <a
             href="/signup"
-            className="hidden md:inline-block bg-[#1F6FE2] text-white px-4 py-2 rounded-full hover:scale-105 transition-all duration-500 ease-initial text-sm font-medium hover:bg-blue-700 "
+            className="hidden md:inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:scale-105 transition-all duration-500 ease-initial text-sm font-medium hover:bg-blue-700 "
           >
             Get Started
           </a>

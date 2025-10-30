@@ -1,0 +1,12 @@
+<svg id="Component_590_1" data-name="Component 590 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="224.229" height="224.229" viewBox="0 0 224.229 224.229">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.467" cy="0.224" r="0.813" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.232" stop-color="#fcfdff"/>
+      <stop offset="0.488" stop-color="#fdfeff"/>
+      <stop offset="0.712" stop-color="#f2f7fd"/>
+      <stop offset="1" stop-color="#eff5ff"/>
+    </radialGradient>
+  </defs>
+  <circle id="Ellipse_2369" data-name="Ellipse 2369" cx="112.115" cy="112.115" r="112.115" fill="url(#radial-gradient)"/>
+</svg>

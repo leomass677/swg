@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @import "tailwindcss";
 
@@ -40,13 +40,13 @@ html {
 }
 
 @theme {
+  /* font */
   --font-Roboto: "Roboto", sans-serif;
   --font-Tinos: "Tinos", serif;
   --font-Dm-serif: "DM Serif Text", serif;
   --font-inter: "Inter", sans-serif;
   --font-Dm-sans: "DM Sans", sans-serif;
-}
-@theme {
+
   /* Nevy-Green */
   --color-primary-50: #d6dbd6;
   --color-primary-100: #bbc2bb;
@@ -59,6 +59,7 @@ html {
   --color-primary-800: #19241a;
   --color-primary-900: #111811;
   --color-primary-950: #0a0f0a;
+
   /* Crayola's */
   --color-crayola-100: #feefd1;
   --color-crayola-200: #fde4b3;
@@ -66,13 +67,16 @@ html {
   --color-crayola-400: #fcc867;
   --color-crayola-500: #fbbb41;
   --color-crayola-600: #faad1b;
-  /* Dark */
 
+  /* Dark */
   --color-dark: #0f0e0e;
+
   /* white */
   --color-white: #f3f3e0;
+
   /* shade */
   --color-shade: #fcfcfd;
+
   /* Grey */
   --color-grey-50: #f9fafb;
   --color-grey-100: #f0f2f5;
@@ -86,18 +90,16 @@ html {
   --color-grey-900: #101828;
 
   /* blue */
-  @theme {
-    --color-blue-50: #eaf2fd;
-    --color-blue-100: #d5e4fb;
-    --color-blue-200: #b0cdf7;
-    --color-blue-300: #8bb6f3;
-    --color-blue-400: #66a0ef;
-    --color-blue-500: #1f6fe2; /* base */
-    --color-blue-600: #1b63cb;
-    --color-blue-700: #1757b4;
-    --color-blue-800: #134b9d;
-    --color-blue-900: #0f3f86;
-  }
+  --color-blue-50: #eaf2fd;
+  --color-blue-100: #d5e4fb;
+  --color-blue-200: #b0cdf7;
+  --color-blue-300: #8bb6f3;
+  --color-blue-400: #66a0ef;
+  --color-blue-500: #1f6fe2; /* base */
+  --color-blue-600: #1b63cb;
+  --color-blue-700: #1757b4;
+  --color-blue-800: #134b9d;
+  --color-blue-900: #0f3f86;
 
   --color-gradient-1: linear-gradient(135deg, #e59f1a, #98a499, #768678);
 
@@ -109,7 +111,7 @@ html {
     #ff6600 80%
   );
 
-  /* New gradient: Crayola yellow to grey */
+  /* gradient*/
   --color-gradient-softlight: linear-gradient(
     135deg,
     #feefd1 0%,
