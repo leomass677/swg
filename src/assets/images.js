@@ -46,6 +46,20 @@ import sustainability_icon from "./images/sustainability-icon.png";
 import testimonial_star from "./images/testimonial-star.png";
 import training_support from "./images/training-support.png";
 import vendor_financing from "./images/vendor-financing.png";
+import gif_1 from "./images/pattern-1.gif";
+import gif_2 from "./images/pattern-2.gif";
+import gif_3 from "./images/plasma-3.gif";
+import gif_4 from "./images/plasma-4.gif";
+import Gemini_1 from "./images/Gemini_1.png";
+import Gemini_2 from "./images/Gemini_2.png";
+import Gemini_3 from "./images/Gemini_3.png";
+import Gemini_4 from "./images/Gemini_4.png";
+import Gemini_5 from "./images/Gemini_5.png";
+import BisGif1 from "./images/Business deal.lottie";
+import BisGif2 from "./images/Microsoft 365 - Automated Provisioning.lottie";
+import BisGif3 from "./images/world.lottie";
+import BisGif4 from "./images/Information Technology.lottie";
+import BisGif5 from "./images/Animated Dashboards.lottie";
 
 const images = {
   hero_image,
@@ -95,6 +109,19 @@ const images = {
   testimonial_star,
   training_support,
   vendor_financing,
+  gif_1,
+  gif_2,
+  gif_3,
+  gif_4,
+  Gemini_1,
+  Gemini_2,
+  Gemini_4,
+  Gemini_5,
+  BisGif1,
+  BisGif2,
+  BisGif3,
+  BisGif4,
+  BisGif5,
 };
 
 export default images;

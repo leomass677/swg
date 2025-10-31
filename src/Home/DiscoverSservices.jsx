@@ -14,56 +14,56 @@ const DiscoverSservices = () => {
       title: "IT Consulting",
       img: images.it_consulting,
       linkTo: "/",
-      text: "",
+      text: "Drive Value with Expertise",
       textImg: images.it_consulting_icon,
     },
     {
       title: "Bespoke Technology Innovation",
       img: images.bespoke_tech,
       linkTo: "/",
-      text: "",
+      text: "You Think It, We Build It",
       textImg: images.bespoke_tech_icon,
     },
     {
       title: "Automation Service",
       img: images.automaion_service,
       linkTo: "/",
-      text: "",
+      text: "Ignite Your Digital Transformation",
       textImg: images.application_service_icon,
     },
     {
       title: "Infrastructure Service",
       img: images.infastructure_service,
       linkTo: "/",
-      text: "",
+      text: "Your Trusted IT Provider",
       textImg: images.infastructure_service_icon,
     },
     {
       title: "Digital Commerce",
       img: images.digital_commerce,
       linkTo: "/",
-      text: "",
+      text: "Achieve Lasting Financial Success",
       textImg: images.digital_commerce_icon,
     },
     {
       title: "Customer Experience",
       img: images.customer_exp,
       linkTo: "/",
-      text: "",
+      text: "Make Your Customers Happy",
       textImg: images.customer_exp_icon,
     },
     {
       title: "Security Solutions",
       img: images.security_solution,
       linkTo: "/",
-      text: "",
+      text: "Protect Your Date & Infrastructure",
       textImg: images.security_solution_icon,
     },
     {
       title: "Sustainability Consulting & Solutions",
       img: images.sustainability,
       linkTo: "/",
-      text: "",
+      text: "Build Profitable Future",
       textImg: images.sustainability_icon,
     },
   ];
@@ -74,7 +74,7 @@ const DiscoverSservices = () => {
         <h2 className="text-md uppercase font-light text-center">
           Discover Our Services
         </h2>
-        <p className="text-md sm:text-md md:text-2xl lg:text-2xl max-w-md lg:max-w-lg xl:max-w-3xl leading-snug text-center">
+        <p className="text-md  max-w-md lg:max-w-4xl leading-snug text-center">
           From bespoke software development to IT consultancy, we make sure our
           clients have the right resources to keep up with today’s ever-evolving
           technology landscape.

@@ -3,6 +3,7 @@ import { video } from "../assets/video";
 import { motion } from "framer-motion";
 import bgImage from "../assets/images/background001.png";
 import icons from "../assets/icons";
+import AvailabilityBadge from "../Animation/AvailabilityBadge";
 
 const Global = () => {
   const y = 50; // initial vertical offset
@@ -87,9 +88,105 @@ const Global = () => {
           whileInView={{ opacity: 1, x: 0 }} // animate to center
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 3.6, ease: "easeOut" }}
-          className="mt-14 flex justify-center "
+          className="mt-14 flex justify-center relative"
         >
           <img src={icons.map} alt={icons.map} />
+          {/* 1 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/4 left-786`}
+          />
+
+          {/* 2 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/4 left-4/6`}
+          />
+
+          {/* 3 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-2/8 left-4/7`}
+          />
+
+          {/* 4 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-2/4 right-4/9`}
+          />
+
+          {/* 5 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-3/7 right-1/2`}
+          />
+
+          {/* 6 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-4/6 right-1/2`}
+          />
+
+          {/* 7 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/2 right-1/2`}
+          />
+
+          {/* 8 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-2/9 left-70`}
+          />
+
+          {/* 9 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-5/10 left-4/9`}
+          />
+
+          {/* 10 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-4/9 right-2/6`}
+          />
+
+          {/* 11 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-4/5 right-75`}
+          />
+
+          {/* 12 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/5 right-2/7`}
+          />
+
+          {/* 13 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-56 left-5/9`}
+          />
+
+          {/* 14 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-50 right-95`}
+          />
+
+          {/* 15 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-44 left-80`}
+          />
+
+          {/* 16 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-50 left-80`}
+          />
+
+          {/* 17 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-80 right-70`}
+          />
+
+          {/* 18 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-40 right-90`}
+          />
+
+          {/* 19 */}
+          <AvailabilityBadge
+            className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-60 left-80`}
+          />
+
+          {/* 20 */}
         </motion.div>
       </div>
     </div>

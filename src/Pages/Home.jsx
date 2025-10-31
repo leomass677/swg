@@ -15,6 +15,7 @@ const Home = () => {
       <Hero />
       <GlobalProvider />
       <DiscoverSservices />
+      <PowerfulEsolutions />
     </div>
   );
 };
