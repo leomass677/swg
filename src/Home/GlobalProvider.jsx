@@ -14,14 +14,14 @@ const Global = () => {
 
   return (
     <div className="mt-10 text-shade">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden w-full">
         <video
           src={video.AI_medium}
           autoPlay
           playsInline
           muted
           loop
-          className=""
+          className="opacity-70 "
         ></video>
         <motion.p
           initial={{ opacity: 0, y }}
@@ -34,6 +34,7 @@ const Global = () => {
           We are a leading global provider of customized eGovernment,
           eEducation, and eHealthcare software solutions and IT infrastructure.
         </motion.p>
+        <div className="w-full top-0 bg-transparent  h-full absolute"></div>
       </div>
       <div
         style={{
@@ -51,19 +52,19 @@ const Global = () => {
           </h4>
           <div className="flex">
             <div className="flex flex-1 flex-col gap-6">
-              <p className="flex flex-col gap-1 text-4xl font-Tinos font-semibold ">
+              <p className="flex flex-col gap-1 text-4xl font-Tinos font-semibold  oldstyle-nums">
                 $50m+
                 <span className="text-sm font-inter font-medium">
                   technology investment
                 </span>
               </p>
-              <p className="flex flex-col gap-1 text-4xl font-Tinos font-semibold ">
+              <p className="flex flex-col gap-1 text-4xl font-Tinos font-semibold  oldstyle-nums">
                 450+
                 <span className="text-sm font-inter font-medium">
                   enrolment centers
                 </span>
               </p>
-              <p className="flex flex-col gap-1 text-4xl font-Dm-sans font-semibold ">
+              <p className="flex flex-col gap-1 text-4xl font-Dm-sans font-semibold oldstyle-nums">
                 13m
                 <span className="text-sm font-inter font-medium">
                   identity documents issued

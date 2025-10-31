@@ -11,7 +11,7 @@ import Testimonials from "../Home/Testimonials";
 
 const Home = () => {
   return (
-    <div className="py-12   flex flex-col justify-center">
+    <div className="py-12   flex flex-col justify-center max-w-[1440px]">
       <Hero />
       <GlobalProvider />
       <DiscoverSservices />

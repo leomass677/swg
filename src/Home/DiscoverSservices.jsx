@@ -80,7 +80,7 @@ const DiscoverSservices = () => {
           technology landscape.
         </p>
       </div>
-      <div className="grid grid-cols-4 gap-6 relative">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-content-center">
         {card.map((items, key) => (
           <motion.div
             key={key}
@@ -88,7 +88,7 @@ const DiscoverSservices = () => {
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative flex flex-col items-center cursor-pointer shadow-md max-w-[250px] justify-center text-center gap-6 p-6 rounded-xl text-[12px] border border-gray-200 bg-shade group"
+            className="relative flex flex-col items-center cursor-pointer shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] w-[250px] h-[150px] justify-items-center-safe text-center gap-4 p-6 rounded-xl text-[12px] border border-gray-100 bg-shade group"
           >
             <motion.img
               src={items.textImg}
@@ -114,13 +114,19 @@ const DiscoverSservices = () => {
 
             {/* Hover*/}
             <motion.div
-              className="absolute inset-0 flex flex-col items-center justify-start gap-2 pb-4 bg-white bg-shade rounded-xl overflow-hidden text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+              className="absolute inset-0 flex hover:border-0 gap-2 bg-linear-to-b from-blue-100/60 via-purple-500/80 backdrop-blur-sm to-blue-600/40 rounded-xl overflow-hidden text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
               initial={{ opacity: 0 }}
               whileHover={{ opacity: 1 }}
             >
-              <img src={items.img} alt={items.img} className="w-full h-auto" />
-              <p className="text-[12px] md:text-[14px] font-medium leading-tight text-grey-700">
+              <img
+                src={items.img}
+                alt={items.img}
+                className=" h-auto w-[50%] object-cover
+                "
+              />
+              <p className="text-[12px] md:text-[14px] self-center px-1 font-medium leading-tight text-shade flex-1">
                 {items.text}
+                {console.log(items.text)}
               </p>
             </motion.div>
           </motion.div>
