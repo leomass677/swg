@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const PowerfulEsolutions = () => {
   return (
-    <section className="relative flex flex-col-reverse md:flex-row items-center gap-10 px-6 md:px-12 lg:px-24 py-16 bg-blue-50 mt-8 overflow-hidden">
+    <section className="relative flex flex-col-reverse md:flex-row items-center gap-10 py-12 px-6 md:px-12 lg:px-24 bg-blue-50  overflow-hidden w-full my-6">
       {/* Left Section */}
       <motion.div
         className="flex-1 flex flex-col gap-6 text-center md:text-left"
@@ -14,8 +14,8 @@ const PowerfulEsolutions = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-gray-800 font-Tinos font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight max-w-2xl mx-auto md:mx-0">
-          Engineering powerful e-Solutions for emerging markets
+        <h2 className="text-gray-800 font-Tinos font-bold text-2xl sm:text-3xl lg:text-3xl leading-tight max-w-3xl mx-auto md:mx-0">
+          Engineering powerful E-Solutions for emerging markets
         </h2>
 
         <div className="flex flex-col-reverse gap-6 items-center md:items-start">
@@ -52,7 +52,7 @@ const PowerfulEsolutions = () => {
 
       {/* Right Section  */}
       <motion.div
-        className="flex-1 relative w-full h-[350px] sm:h-[450px] lg:h-[600px]"
+        className="flex-1 relative grid grid-cols-2 gap-1.5 p-10 place-items-end w-full h-full justify-center items-center"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -60,32 +60,32 @@ const PowerfulEsolutions = () => {
         <img
           src={images.circles}
           alt="Animated circles"
-          className="absolute top-1/2 left-1/2 w-32 sm:w-40 lg:w-52 -translate-x-1/2 -translate-y-1/2 shadow-2xl rounded-full p-4 md:p-6"
+          className="absolute top-1/2 left-1/2 w-35 b  -translate-x-1/2 -translate-y-1/2 shadow rounded-full p-4 md:p-6"
         />
 
         {/* Top */}
         <img
           src={images.Gemini_1}
           alt="Gemini 1"
-          className="absolute right-1/2 translate-x-1/2 top-0 w-[140px] sm:w-[180px] lg:w-[200px] h-[140px] sm:h-[180px] lg:h-[200px] object-cover shadow-2xl rounded-b-md rounded-tr-3xl"
+          className=" w-[10px] sm:w-[50px] lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover shadow-2xl rounded-b-md rounded-tr-3xl rounded-tl-full hover:rounded-tl-none hover:scale-105 transition-all duration-75 cursor-pointer ease-in-out"
         />
         {/* Left */}
         <img
           src={images.automaion_service}
           alt="Automation service"
-          className="absolute left-4 sm:left-16 top-1/2 -translate-y-1/2 w-[140px] sm:w-[180px] lg:w-[200px] h-[140px] sm:h-[180px] lg:h-[200px] object-cover shadow-2xl rounded-r-md rounded-tl-3xl"
+          className=" w-[10px] sm:w-[50px] place-self-start lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover shadow-2xl rounded-r-md rounded-tl-3xl rounded-tr-full hover:rounded-tr-none hover:scale-105 transition-all duration-75 cursor-pointer ease-in-out"
         />
         {/* Right */}
         <img
           src={images.Gemini_4}
           alt="Gemini 4"
-          className="absolute right-4 sm:right-16 top-1/2 -translate-y-1/2 w-[140px] sm:w-[180px] lg:w-[200px] h-[140px] sm:h-[180px] lg:h-[200px] object-cover shadow-2xl rounded-l-md rounded-br-3xl"
+          className="w-[10px] sm:w-[50px]  lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover shadow-2xl rounded rounded-bl-full hover:rounded-bl-none hover:scale-105 transition-all duration-75 cursor-pointer ease-in-out"
         />
         {/* Bottom */}
         <img
           src={images.Gemini_5}
           alt="Gemini 5"
-          className="absolute right-1/2 translate-x-1/2 bottom-0 w-[140px] sm:w-[180px] lg:w-[200px] h-[140px] sm:h-[180px] lg:h-[200px] object-cover shadow-2xl rounded-t-md rounded-bl-3xl"
+          className="  w-[30px] place-self-start sm:w-[50px] lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover  rounded-t-md rounded-bl-3xl shadow-2xl rounded-br-full hover:rounded-br-none hover:scale-105 transition-all duration-75  cursor-pointer ease-in-out"
         />
       </motion.div>
     </section>

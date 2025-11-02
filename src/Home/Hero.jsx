@@ -3,6 +3,7 @@ import { FcWorkflow } from "react-icons/fc";
 import { FaDragon } from "react-icons/fa";
 import { motion } from "framer-motion";
 import images from "../assets/images";
+import WorkWithYouLink from "../component/WorkWithYouLink";
 
 const Hero = () => {
   return (
@@ -21,11 +22,12 @@ const Hero = () => {
 
         {/* Button */}
         <div className="flex justify-center md:justify-start mt-6">
-          <button className="flex items-center gap-2 cursor-pointer group text-sm sm:text-base font-medium">
+          {/* <button className="flex items-center gap-2 cursor-pointer group text-sm sm:text-base font-medium">
             <FcWorkflow className="group-hover:translate-x-4 group-hover:opacity-0 group-hover:scale-0 transition-all duration-500 ease-in" />
             <span>Let's work with you</span>
             <FaDragon className="-translate-x-4 scale-90 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-500 ease-in" />
-          </button>
+          </button> */}
+          <WorkWithYouLink label="Let's work with you" />
         </div>
       </motion.div>
 
@@ -35,7 +37,7 @@ const Hero = () => {
         <motion.img
           src={images.hero_image}
           alt="Hero"
-          className="w-56 sm:w-72 md:w-80 lg:w-96 xl:w-[22rem] h-auto object-cover drop-shadow-lg"
+          className="w-56 sm:w-72 md:w-80 lg:w-96 xl:w-[22rem] z-20 h-auto object-cover drop-shadow-lg"
           initial={{ scale: 0.95 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

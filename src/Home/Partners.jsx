@@ -1,162 +1,52 @@
 import React from "react";
+import images from "../assets/images";
+import { div, img } from "framer-motion/client";
 
 const Partners = () => {
+  const partner = [
+    { img: images.google },
+    { img: images.oracle },
+    { img: images.microsoft },
+    { img: images.lenovo },
+    { img: images.cisco },
+    { img: images.payfixy },
+    { img: images.entusted },
+    { img: images.newera },
+    { img: images.fortinet },
+    { img: images.innovate_pay },
+    { img: images.nibss },
+    { img: images.dahua },
+    { img: images.ios },
+    { img: images.newwork },
+    { img: images.check_point },
+  ];
+
   return (
-    <div className="">
-      <div className="">Our Partners</div>
-      <span className="">
-        Our close alliance with global industry leaders allows us to offer our
-        clients cutting-edge technology, robust security measures, and timely
-        support.
-      </span>
-      <div className="">
-        <div>
-          <span className="">
-            <img src="images/home/partners/google.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/oracle.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/microsoft.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/lenovo.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/cisco.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/google.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/oracle.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/microsoft.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/lenovo.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/cisco.png" alt="" />
-          </span>
-        </div>
-        <div>
-          <span className="">
-            <img src="images/home/partners/fortinet.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/newera.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/entrusted.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/payfixy.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/innovate-pay.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/fortinet.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/newera.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/entrusted.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/payfixy.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/innovate-pay.png" alt="" />
-          </span>
-        </div>
-        <div>
-          <span className="">
-            <img src="images/home/partners/nibss.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/newworks.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/ois.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/dahua.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/checkpoint.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/nibss.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/newworks.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/ois.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/dahua.png" alt="" />
-          </span>
-          <span className="">
-            <img src="images/home/partners/checkpoint.png" alt="" />
-          </span>
-        </div>
-      </div>
-      <div className="">
-        <span className="">
-          <img src="images/home/partners/google.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/oracle.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/microsoft.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/lenovo.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/cisco.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/fortinet.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/newera.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/entrusted.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/payfixy.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/innovate-pay.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/nibss.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/newworks.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/ois.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/dahua.png" alt="" />
-        </span>
-        <span className="">
-          <img src="images/home/partners/checkpoint.png" alt="" />
+    <div className="flex flex-col p-8 gap-6 md:gap-8 lg:12">
+      <div className="flex flex-col gap-4 justify-center items-center">
+        {" "}
+        <h3 className="text-3xl font-Tinos font-bold">Our Partners</h3>
+        <span className="leading-snug max-w-3xl text-center text-xl">
+          Our close alliance with global industry leaders allows us to offer our
+          clients cutting-edge technology, robust security measures, and timely
+          support.
         </span>
       </div>
-      <span className="">
-        <img src="/svgs/partners-ball.svg" alt="" />
-      </span>
+
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-4 gap-4 md:gap-6 lg:gap-8">
+        {partner.map((item, key) => (
+          <div
+            key={key}
+            className="flex items-center justify-center py-4 rounded-md shadow-md border-white border bg-shade"
+          >
+            <img
+              src={item.img}
+              alt={`Partner ${key}`}
+              className="h-12 cursor-pointer object-contain w-20 md:w-24 lg:w-30 xl:w-35"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

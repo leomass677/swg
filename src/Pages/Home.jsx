@@ -8,6 +8,7 @@ import VendorFinancing from "../Home/VendorFinancing";
 import Partners from "../Home/Partners";
 import WhyChoose from "../Home/WhyChoose";
 import Testimonials from "../Home/Testimonials";
+import ScrollVideoEffect from "./ScrollVideoEffect";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <GlobalProvider />
       <DiscoverSservices />
       <PowerfulEsolutions />
+      <VendorFinancing />
+      <Partners />
     </div>
   );
 };

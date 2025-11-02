@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import bgImage from "../assets/images/background001.png";
 import icons from "../assets/icons";
 import AvailabilityBadge from "../Animation/AvailabilityBadge";
+import ScrollVideoEffect from "../Pages/ScrollVideoEffect";
 
 const Global = () => {
   const y = 50; // initial vertical offset
@@ -13,29 +14,8 @@ const Global = () => {
   console.log(bgImage);
 
   return (
-    <div className="mt-10 text-shade">
-      <div className="relative overflow-hidden w-full">
-        <video
-          src={video.AI_medium}
-          autoPlay
-          playsInline
-          muted
-          loop
-          className="opacity-70 "
-        ></video>
-        <motion.p
-          initial={{ opacity: 0, y }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay, duration, ease: "easeOut" }}
-          whileHover={{ scale: hoverScale }}
-          className="absolute top-1/3 text-lg leading-snug hidden -left-2 bg-dark/50 backdrop-blur-md text-shade max-w-sm p-6   rounded-sm"
-        >
-          We are a leading global provider of customized eGovernment,
-          eEducation, and eHealthcare software solutions and IT infrastructure.
-        </motion.p>
-        <div className="w-full top-0 bg-transparent  h-full absolute"></div>
-      </div>
+    <div className=" text-shade">
+      <ScrollVideoEffect />
       <div
         style={{
           backgroundImage: `url(${bgImage})`,

@@ -10,6 +10,37 @@ html {
   transition: font-size 0.3s ease, scroll-padding-top 0.3s ease,
     background-color 0.3s ease, color 0.3s ease;
 }
+/* _______________ */
+
+.clip {
+  background-color: burlywood;
+  width: 700px;
+  height: 800px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.clip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100px;
+  background: white;
+  border-bottom-right-radius: 40px;
+}
+
+/* Hide scrollbar for WebKit */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+}
 
 /* Responsive Typography */
 @media (min-width: 640px) {

@@ -1,6 +1,8 @@
 import React from "react";
 import images from "../assets/images";
 import { motion } from "framer-motion";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 const DiscoverSservices = () => {
   const card = [
     {
@@ -88,7 +90,7 @@ const DiscoverSservices = () => {
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative flex flex-col items-center cursor-pointer shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] w-[250px] h-[150px] justify-items-center-safe text-center gap-4 p-6 rounded-xl text-[12px] border border-gray-100 bg-shade group"
+            className="relative overflow-hidden flex flex-col items-center cursor-pointer shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] w-[250px] h-[150px] justify-items-center-safe text-center gap-4 p-6 rounded-xl text-[12px] border border-gray-100 bg-shade group"
           >
             <motion.img
               src={items.textImg}
@@ -107,10 +109,9 @@ const DiscoverSservices = () => {
             >
               {items.title}
             </motion.p>
+            <div className="size-16 bg-blue-200 rounded-4xl absolute -top-8 -right-8 skew-30"></div>
 
             {/* shapes */}
-            <div className="absolute -top-0 -left-0 w-10 h-20 bg-blue-400 rounded-tl-2xl -z-10 opacity-0 group-hover:translate-4"></div>
-            <div className="bg-blue-400 w-20 h-20 absolute rounded-tr-xl rounded-bl-xl rounded-xs -z-10 bottom-10 right-10 opacity-0"></div>
 
             {/* Hover*/}
             <motion.div
@@ -124,10 +125,12 @@ const DiscoverSservices = () => {
                 className=" h-auto w-[50%] object-cover
                 "
               />
-              <p className="text-[12px] md:text-[14px] self-center px-1 font-medium leading-tight text-shade flex-1">
-                {items.text}
-                {console.log(items.text)}
-              </p>
+              <div className="flex-1 gap-4 flex flex-col  w-full h-full justify-between py-8 group">
+                <p className="text-[12px md:text-[14px]  px-1 font-medium leading-tight text-shade ">
+                  {items.text}
+                </p>
+                <MdOutlineKeyboardArrowRight className="transition-all duration-500 ease-in-out text-shade text-2xl opacity-0 scale-0 group-hover:translate-x-full group-hover:scale-110 group-hover:opacity-100" />
+              </div>
             </motion.div>
           </motion.div>
         ))}

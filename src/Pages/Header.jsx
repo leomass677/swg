@@ -348,8 +348,11 @@ export default function Header() {
           <img src={icons.logo} alt="SWG Logo" />
 
           {/* Desktop Nav */}
-          <div className="flex items-center gap-8 bg-blue-100/10 backdrop-blur-xs px-12 py-2 rounded-4xl shadow-[inset_8px_8px_16px_#b0cdf7,inset_-8px_-8px_16px_#eaf2fd] ">
-            <p className="flex items-center cursor-pointer group ">
+          <div className="flex items-center gap-8 bg-blue-100/10 backdrop-blur-xs px-12 py-2 rounded-4xl shadow-[inset_8px_8px_16px_#F4EEFF,inset_-8px_-8px_16px_#DBE2EF] ">
+            <p
+              onMouseEnter={() => setIsHover(false)}
+              className="flex items-center cursor-pointer group "
+            >
               Home{" "}
               <MdOutlineKeyboardArrowRight className="group-hover:rotate-90 transition-all duration-500 ease-in-out" />
             </p>
