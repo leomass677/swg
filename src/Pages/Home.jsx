@@ -12,7 +12,7 @@ import ScrollVideoEffect from "./ScrollVideoEffect";
 
 const Home = () => {
   return (
-    <div className="py-12   flex flex-col justify-center max-w-[1440px]">
+    <div className="py-12   flex flex-col justify-center">
       <Hero />
       <GlobalProvider />
       <DiscoverSservices />

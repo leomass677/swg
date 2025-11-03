@@ -126,7 +126,7 @@ const Footer = () => {
       // }}
       className="px-18 py-12 border-t border-gray-100 shadow-lg  bg-shade  "
     >
-      <motion.div className=" w-full flex flex-col gap-4      ">
+      <motion.div className=" w-full flex flex-col gap-4   mx-auto max-w-[1440px]   ">
         <div className=" w-full grid grid-cols-5  ">
           {navItems.map((nav, key) => (
             <ul key={key} className="">

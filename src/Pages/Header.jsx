@@ -342,28 +342,23 @@ export default function Header() {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <div className="fixed w-screen  z-80">
-      <header className="bg-shade shadow-sm px-1 sm:px-2 md:px-6 lg:px-8 xl:px-12 w-full z-50 relative">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div className="fixed w-full z-80">
+      <header className="bg-shade shadow-sm sticky top-0 left-0 w-full z-50 relative">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-0 h-16 flex items-center justify-between">
           <img src={icons.logo} alt="SWG Logo" />
 
           {/* Desktop Nav */}
-          <div className="flex items-center gap-8 bg-blue-100/10 backdrop-blur-xs px-12 py-2 rounded-4xl shadow-[inset_8px_8px_16px_#F4EEFF,inset_-8px_-8px_16px_#DBE2EF] ">
-            <p
-              onMouseEnter={() => setIsHover(false)}
-              className="flex items-center cursor-pointer group "
-            >
-              Home{" "}
-              <MdOutlineKeyboardArrowRight className="group-hover:rotate-90 transition-all duration-500 ease-in-out" />
+          <div className="hidden lg:flex items-center gap-8 bg-blue-100/40 backdrop-blur-xs px-12 py-2 rounded-4xl">
+            <p className="flex items-center cursor-pointer">
+              Home <MdOutlineKeyboardArrowRight />
             </p>
 
             {/* Hover trigger for Menu */}
             <li
               onMouseEnter={() => setIsHover(true)}
-              className="flex items-center h-full cursor-pointer group "
+              className="flex items-center h-full cursor-pointer"
             >
-              Menu{" "}
-              <MdOutlineKeyboardArrowRight className="group-hover:rotate-90 transition-all duration-500 ease-in-out" />
+              Menu <MdOutlineKeyboardArrowRight />
             </li>
 
             <AvailabilityBadge />
@@ -389,10 +384,20 @@ export default function Header() {
         {/* ---------- Dropdown Menu (on Hover) ---------- */}
         {isHover && (
           <motion.div
-            onMouseLeave={() => setIsHover(false)}
-            className="absolute left-0 top-[64px] w-full flex flex-col gap-4 h-screen   bg-shade z-50   py-6 border-t border-gray-300 shadow-lg"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            onMouseLeave={() => {
+              setIsHover(false);
+            }}
+            className={`absolute left-0 top-[64px] w-full   bg-shade z-50  px-6 py-6 xl:pb-8 2xl:pb-12 border-t-2 border-gray-200 shadow-md backdrop-blur-md ${
+              isHover
+                ? ""
+                : ":translate-y-50 duration-300 transition-all ease-in-out"
+            }`}
           >
-            <div className="max-w-7xl w-full grid grid-cols-4  justify-items-center min-h-[70%]">
+            <div className="max-w-[1440px] w-full grid grid-cols-4 mx-auto">
               {navItems.map((nav, key) => (
                 <ul key={key} className="">
                   <h6 className="text-sm text-blue-700 font-medium mb-2">
@@ -433,19 +438,6 @@ export default function Header() {
                     </div>
                   </ul>
                 ))}
-              </div>
-            </div>
-            <hr className="bg-grey-400 text-grey-400  h-0.5" />
-            <div
-              className="flex mx-auto max-w-7xl px-14 flex-row-reverse justify-between items-center w-full
-            "
-            >
-              <img src={icons.logo} alt="SWG Logo" className="h-4" />
-              <div className="flex flex-1">
-                <span className="size-4 rounded-full bg-blue-600 shadow-lg mix-blend-multiply"></span>
-                <span className="size-5 rounded-full bg-blue-400 -translate-x-1 shadow-md mix-blend-multiply"></span>
-                <span className="size-6 rounded-full bg-blue-300 -translate-x-2 shadow-sm mix-blend-multiply"></span>
-                <span className="size-7 rounded-full bg-blue-100 -translate-x-3 xs mix-blend-multiply"></span>
               </div>
             </div>
           </motion.div>

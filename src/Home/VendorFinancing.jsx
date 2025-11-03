@@ -6,8 +6,8 @@ import WorkWithYouLink from "../component/WorkWithYouLink";
 
 const VendorFinancing = () => {
   return (
-    <div className="flex flex-col md:flex-row p-8">
-      <div className="flex-1 p-8">
+    <div className="flex flex-col max-w-[1440px] md:flex-row p-8 xl:px-0  mx-auto">
+      <div className="flex-1 p-8 xl:px-0">
         <img
           src={images.Gemini_5}
           alt=""

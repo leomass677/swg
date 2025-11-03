@@ -10,7 +10,7 @@ const WorkWithYouLink = ({
   return (
     <a className="flex relative items-center group max-w-fit" href={href}>
       <span
-        className={`relative size-10 rounded-full before:content-[''] before:bottom-0 before:right-0 before:absolute before:w-5 before:h-5 before:rounded-tl-xl before:skew-3 scale-60 transition-all ease-in duration-300 ${bgColor} ${hoverColor} before:${bgColor} before:group-hover:${hoverColor}`}
+        className={`relative size-10 rounded-full before:content-[''] before:bottom-0 before:right-0 before:absolute before:w-5 before:h-5 before:rounded-tl-xl before:skew-3 scale-60 transition-all ease-in duration-300 ${bgColor} ${hoverColor} before:bg-crayola-400 before:group-hover:${hoverColor}`}
       ></span>
       <TfiLayoutLineSolid className="-translate-x-4" />
       <HiOutlineChevronRight className="-translate-x-5 group-hover:translate-x-1 group-hover:scale-0 group-hover:opacity-0 group-hover transition-all duration-300 ease-in-out" />
