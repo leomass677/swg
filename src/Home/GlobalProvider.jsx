@@ -1,5 +1,4 @@
 import React from "react";
-import { video } from "../assets/video";
 import { motion } from "framer-motion";
 import bgImage from "../assets/images/background001.png";
 import icons from "../assets/icons";
@@ -7,168 +6,106 @@ import AvailabilityBadge from "../Animation/AvailabilityBadge";
 import ScrollVideoEffect from "../Pages/ScrollVideoEffect";
 
 const Global = () => {
-  const y = 50; // initial vertical offset
-  const delay = 0.3;
-  const duration = 0.8;
-  const hoverScale = 1.08;
-  console.log(bgImage);
-
   return (
-    <div className=" text-shade">
+    <div className="text-shade relative">
       <ScrollVideoEffect />
+
+      {/* Background Section with Overlay */}
       <div
+        className="relative px-4 sm:px-6 lg:px-12 py-20"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          opacity: "0.7",
         }}
-        className="bg-gradient-softlight p-[120px]"
       >
-        <div className="mx-auto max-w-[1440px]">
-          <div className="flex flex-col gap-16">
-            <h4 className="max-w-[350px] xl:max-w-[600px] leading-relaxed text-4xl ">
-              Breaking barriers & delivering value for 10+ years.
-            </h4>
-            <div className="flex">
-              <div className="flex flex-1 flex-col gap-6">
-                <p className="flex flex-col gap-1 text-4xl font-Tinos font-semibold  oldstyle-nums">
-                  $50m+
-                  <span className="text-sm font-inter font-medium">
-                    technology investment
+        {/* Semi-transparent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-teal-500/5 to-cyan-300/40 blur backdrop-blur-xs z-0"></div>
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-[1440px] flex flex-col gap-16">
+          {/* Header */}
+          <h4 className="text-2xl sm:text-3xl lg:text-4xl leading-relaxed max-w-md sm:max-w-xl xl:max-w-2xl">
+            Breaking barriers & delivering value for 10+ years.
+          </h4>
+
+          {/* Stats Section */}
+          <div className="flex flex-col md:flex-row gap-10">
+            <div className="flex-1 flex flex-col gap-6">
+              {[
+                { value: "$50m+", label: "technology investment" },
+                { value: "450+", label: "enrolment centers" },
+                { value: "13m", label: "identity documents issued" },
+              ].map((stat, index) => (
+                <p
+                  key={index}
+                  className="flex flex-col gap-1 text-3xl sm:text-4xl font-Tinos font-semibold"
+                >
+                  {stat.value}
+                  <span className="text-sm sm:text-base font-inter font-medium">
+                    {stat.label}
                   </span>
                 </p>
-                <p className="flex flex-col gap-1 text-4xl font-Tinos font-semibold  oldstyle-nums">
-                  450+
-                  <span className="text-sm font-inter font-medium">
-                    enrolment centers
-                  </span>
-                </p>
-                <p className="flex flex-col gap-1 text-4xl font-Dm-sans font-semibold oldstyle-nums">
-                  13m
-                  <span className="text-sm font-inter font-medium">
-                    identity documents issued
-                  </span>
-                </p>
-              </div>
-              <div className="flex-1 flex flex-col gap-6">
-                <p className="text-sm sm:text-md md:text-lg lg:text-2xl leading-snug">
-                  Market-leading presence in Nigeria, USA, Ghana, Sierra Leone,
-                  Liberia, South Africa, Uganda, and Sri Lanka.
-                </p>
-                <p className="text-md xl:text-lg">
-                  Including; Germany, Kenya, Canada, Austria, Sweden, Belgium,
-                  Switzerland, Ireland, Spain, South Korea, Japan.
-                </p>
-                <hr className="bg-gray-400 " />
-              </div>
+              ))}
+            </div>
+
+            <div className="flex-1 flex flex-col gap-6">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-snug">
+                Market-leading presence in Nigeria, USA, Ghana, Sierra Leone,
+                Liberia, South Africa, Uganda, and Sri Lanka.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+                Including: Germany, Kenya, Canada, Austria, Sweden, Belgium,
+                Switzerland, Ireland, Spain, South Korea, Japan.
+              </p>
+              <hr className="bg-gray-400" />
             </div>
           </div>
+
+          {/* Map + Badges */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }} // start off-screen to the left
-            whileInView={{ opacity: 1, x: 0 }} // animate to center
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 3.6, ease: "easeOut" }}
-            className="mt-14 flex justify-center relative"
+            transition={{ duration: 2.5, ease: "easeOut" }}
+            className="mt-14 flex justify-center relative overflow-hidden"
           >
-            <img src={icons.map} alt={icons.map} />
-            {/* 1 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/4 left-786`}
+            <img
+              src={icons.map}
+              alt="Global map"
+              className="w-full max-w-4xl object-contain"
             />
 
-            {/* 2 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/4 left-4/6`}
-            />
-
-            {/* 3 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-2/8 left-4/7`}
-            />
-
-            {/* 4 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-2/4 right-4/9`}
-            />
-
-            {/* 5 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-3/7 right-1/2`}
-            />
-
-            {/* 6 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-4/6 right-1/2`}
-            />
-
-            {/* 7 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/2 right-1/2`}
-            />
-
-            {/* 8 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-2/9 left-70`}
-            />
-
-            {/* 9 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-5/10 left-4/9`}
-            />
-
-            {/* 10 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-4/9 right-2/6`}
-            />
-
-            {/* 11 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-4/5 right-75`}
-            />
-
-            {/* 12 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-1/5 right-2/7`}
-            />
-
-            {/* 13 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-56 left-5/9`}
-            />
-
-            {/* 14 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-50 right-95`}
-            />
-
-            {/* 15 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-44 left-80`}
-            />
-
-            {/* 16 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-50 left-80`}
-            />
-
-            {/* 17 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-80 right-70`}
-            />
-
-            {/* 18 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-40 right-90`}
-            />
-
-            {/* 19 */}
-            <AvailabilityBadge
-              className={`absolute hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer top-60 left-80`}
-            />
-
-            {/* 20 */}
+            {/* Responsive badge positions */}
+            {[
+              { top: "top-[20%]", left: "left-[30%]" },
+              { top: "top-[25%]", left: "left-[50%]" },
+              { top: "top-[30%]", left: "left-[60%]" },
+              { top: "top-[35%]", right: "right-[40%]" },
+              { top: "top-[40%]", right: "right-[50%]" },
+              { top: "top-[45%]", right: "right-[50%]" },
+              { top: "top-[50%]", right: "right-[50%]" },
+              { top: "top-[55%]", left: "left-[70%]" },
+              { top: "top-[60%]", left: "left-[45%]" },
+              { top: "top-[65%]", right: "right-[35%]" },
+              { top: "top-[70%]", right: "right-[20%]" },
+              { top: "top-[75%]", right: "right-[30%]" },
+              { top: "top-[80%]", left: "left-[50%]" },
+              { top: "top-[85%]", right: "right-[10%]" },
+              { top: "top-[90%]", left: "left-[80%]" },
+              { top: "top-[95%]", left: "left-[80%]" },
+              { top: "top-[100%]", right: "right-[20%]" },
+              { top: "top-[105%]", right: "right-[10%]" },
+              { top: "top-[110%]", left: "left-[80%]" },
+            ].map((pos, index) => (
+              <AvailabilityBadge
+                key={index}
+                className={`absolute ${pos.top} ${
+                  pos.left || pos.right
+                } hover:scale-110 hover:bg-crayola-600 transition-all ease-in-out duration-300 cursor-pointer`}
+              />
+            ))}
           </motion.div>
         </div>
       </div>
