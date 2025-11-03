@@ -7,7 +7,7 @@ import icons from "../assets/icons";
 import { NavLink } from "react-router-dom";
 import { GoChevronRight } from "react-icons/go";
 import { motion } from "framer-motion";
-import { label } from "framer-motion/client";
+import { button, div, label, ul } from "framer-motion/client";
 import {
   FaInstagram,
   FaTwitter,
@@ -114,119 +114,121 @@ const Footer = () => {
     },
   ];
 
+  const partner = [
+    { img: images.google },
+    { img: images.oracle },
+    { img: images.microsoft },
+    { img: images.lenovo },
+    { img: images.cisco },
+    { img: images.payfixy },
+    { img: images.entusted },
+    { img: images.newera },
+    { img: images.fortinet },
+    { img: images.innovate_pay },
+    { img: images.nibss },
+    { img: images.dahua },
+    { img: images.ios },
+    { img: images.newwork },
+    { img: images.check_point },
+  ];
+
+  const text = `is a leading software development and technology solutions company specializing in delivering innovative digital products and enterprise software. With a focus on quality, scalability, and user-centric design, SW Global provides custom software, web and mobile applications, and IT consulting services to help businesses streamline operations and drive growth in a rapidly evolving digital world.`;
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const [viewAll, setViewAll] = useState(false);
+  const maxLength = 120;
+  const count = 5;
+  const toggleReadMore = () => setIsExpanded((prev) => !prev);
+
+  const dispalyedItems = viewAll ? partner : partner.slice(0, count);
   const year = new Date().getFullYear();
   return (
-    <footer
-      // style={{
-      //   backgroundImage: `url(${images.footer1})`,
-      //   backgroundPosition: "center",
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   opacity: "1",
-      // }}
-      className="px-18 py-12 border-t border-gray-100 shadow-lg  bg-shade  "
-    >
+    <footer className="px-18 py-12 relative border-t border-gray-200 shadow-lg  bg-shade  ">
       <motion.div className=" w-full flex flex-col gap-4   mx-auto max-w-[1440px]   ">
-        <div className=" w-full grid grid-cols-5  ">
-          {navItems.map((nav, key) => (
-            <ul key={key} className="">
-              <h6 className="text-sm text-blue-700 font-medium mb-2">
-                {nav.label}
-              </h6>
-              <div className="flex flex-col gap-2">
-                {nav.items.map((item) => (
-                  <a
-                    key={item.label}
-                    to={item.href}
-                    className="text-gray-700 flex flex-nowrap items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1"
-                  >
-                    {item.label}
-                    <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
-                  </a>
-                ))}
-              </div>
-            </ul>
-          ))}
+        <div>
+          <div className="flex gap-8">
+            {/* logo /description */}
 
-          <div className="flex flex-col gap-4">
-            {navItems002.map((navItem, key) => (
-              <ul key={key}>
-                <h6 className="text-sm text-blue-700 font-medium mb-2">
-                  {navItem.label}
-                </h6>
-                <div className="flex flex-col gap-2 ">
-                  {navItem.items.map((item) => (
-                    <a
-                      key={item.label}
-                      to={item.href}
-                      className="text-gray-700 group flex flex-nowrap items-center hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1"
-                    >
-                      {item.label}
-                      <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
-                    </a>
-                  ))}
-                </div>
-              </ul>
-            ))}
-          </div>
-          <div className="flex flex-col gap-4">
-            <div>
-              {" "}
-              <h6 className="text-sm text-blue-700 font-medium mb-2">
-                Newsletter
-              </h6>
-              <p className="text-gray-700 flex flex-nowrap items-center text-xs">
-                Stay Industry-connected with our monthly newsletter written by
-                our editorial team.
-              </p>
+            <div className="flex-1 flex flex-col gap-4">
+              <img src={icons.logo} alt="logo" className="w-35" />
+              <div className="flex flex-col gap-2">
+                <p className="text-sm leading-relaxed text-gray-800 font-normal">
+                  <span className="text-blue-500">SW GLOBAL</span>
+                  {isExpanded ? text : `${text.slice(0, maxLength)}...`}
+                </p>
+
+                <button
+                  className="text-sm w-fit cursor-pointer hover:scale-105 transition-all duration-500 rounded-md border border-gray-300 px-4 py-1 "
+                  onClick={toggleReadMore}
+                >
+                  {isExpanded ? "Read less" : "Read More"}
+                </button>
+              </div>
             </div>
-            {/*  */}
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                className="outline-none border-1 border-gray-400 placeholder:text-xs px-2 py-1 rounded-xs text-xs text-grey-600 focus:border-blue-400 focus:border-1.5 transition-all duration-500 w-full "
-              />
-            </div>
-            {/*  */}
-            <div className="flex flex-col gap-4">
-              <p className="text-sm text-blue-700 font-medium mb-2">
-                Our Socials
-              </p>
-              <span className="w-fit gap-4 flex justify-between">
-                {Socials.map((item, key) => (
-                  <div
-                    className="relative rounded-full group bg-blue-50 p-2"
-                    key={key}
-                  >
-                    <a href={item.path} className="text-xl ">
-                      {item.icon}
-                    </a>
-                    <p className="absolute -top-10 bg-shade shadow-md border border-gray-100 left-1/2 -translate-x-1/2 px-2 py-1 rounded-sm text-sm group-hover:scale-100 scale-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out -translate-y-12 group-hover:-translate-y-0">
-                      {item.label}
-                    </p>
+            <div className="flex-2 grid grid-cols-3">
+              {navItems.map((nav, key) => (
+                <ul key={key} className="">
+                  <h6 className="text-sm text-blue-700 font-medium mb-2">
+                    {nav.label}
+                  </h6>
+                  <div className="flex flex-col gap-2">
+                    {nav.items.map((item) => (
+                      <a
+                        key={item.label}
+                        to={item.href}
+                        className="text-gray-700 flex flex-nowrap items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1"
+                      >
+                        {item.label}
+                        <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
+                      </a>
+                    ))}
                   </div>
-                ))}
-              </span>
+                </ul>
+              ))}
             </div>
           </div>
         </div>
-
-        <div className="flex gap-20">
-          <div className="flex flex-col gap-2 w-full">
-            <img src={icons.logo} alt="" className="w-[136px]" />
-            <hr />
-            <p className="text-sm font-light">
-              Copyright © {year} Mag Group Limited
-            </p>
-          </div>
-          <div>
-            <img
-              src={images.footer_img}
-              alt=""
-              className="w-[295px] object-cover "
-            />
-          </div>
+        {/* our partner */}
+        {/* <div className="flex w-full justify-between">
+          <span>Our Partner:</span>
+          <ul className="grid grid-cols-5 gap-4 items-center">
+            {dispalyedItems.map((list, index) => (
+              <img key={list.index} src={list.img} className="w-20" />
+            ))}
+          </ul>
+          {!viewAll && partner.length > count && (
+            <button onClick={() => setViewAll(true)}>View All</button>
+          )}
+        </div> */}
+        {/* downside */}
+        <div className="flex justify-between text-sm font-medium text-gray-700">
+          <p>
+            Copyright © {year} Mag Group Limited <span>swglobal.com</span>
+          </p>
+          <ul className="flex gap-4 ">
+            <a className="text-gray-700 flex flex-nowrap items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1">
+              Teams
+              <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
+            </a>
+            <a className="text-gray-700 flex flex-nowrap items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1">
+              Privacy
+              <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
+            </a>
+            <a className="text-gray-700 flex flex-nowrap items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1">
+              Compliances
+              <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
+            </a>
+          </ul>
+        </div>
+        <div className="absolute left-1/2 text-shade  -translate-x-1/2 -top-6  flex max-w-md justify-between bg-gray-500 rounded-full p-0.5 overflow-hidden  border border-gray-50  h-12">
+          <input
+            type="text"
+            className="flex-1 text-sm placeholder:text-sm text-shade placeholder:text-shade pl-4 outline-0"
+            placeholder="Enter Your Email "
+          />
+          <button className="p-1 h-full w-fit scale-95 hover:scale-100 hover:bg-blue-600 transition-all duration-500 ease-in-out cursor-pointer bg-blue-500 px-4 rounded-4xl text-shade">
+            Contact Us
+          </button>
         </div>
       </motion.div>
     </footer>

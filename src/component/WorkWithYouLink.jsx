@@ -6,9 +6,14 @@ const WorkWithYouLink = ({
   label = "Let's work with you",
   bgColor = "bg-blue-400",
   hoverColor = "group-hover:bg-crayola-400",
+  onclick,
 }) => {
   return (
-    <a className="flex relative items-center group max-w-fit" href={href}>
+    <a
+      onclick={onclick}
+      className="flex relative items-center group max-w-fit"
+      href={href}
+    >
       <span
         className={`relative size-10 rounded-full before:content-[''] before:bottom-0 before:right-0 before:absolute before:w-5 before:h-5 before:rounded-tl-xl before:skew-3 scale-60 transition-all ease-in duration-300 ${bgColor} ${hoverColor} before:bg-crayola-400 before:group-hover:${hoverColor}`}
       ></span>
