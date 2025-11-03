@@ -51,6 +51,8 @@ const Partners = () => {
               <img
                 src={item.img}
                 alt={`Partner ${key}`}
+                loading="lazy"
+                decoding="async"
                 className="h-12 w-20 sm:w-24 lg:w-28 xl:w-32 object-contain cursor-pointer"
               />
             </motion.div>

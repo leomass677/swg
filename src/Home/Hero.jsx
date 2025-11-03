@@ -40,12 +40,13 @@ const Hero = () => {
           className="w-56 sm:w-72 md:w-80 lg:w-96 xl:w-[22rem] z-20 h-auto object-cover drop-shadow-lg"
           initial={{ scale: 0.95 }}
           whileInView={{ scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
           animate={{ rotate: 360 }}
           whileHover={{ scale: 1.03 }}
           transition={{
             rotate: { repeat: Infinity, duration: 15, ease: "linear" },
           }}
+          loading="lazy"
+          decoding="async"
         />
 
         {/* GIF */}
@@ -68,6 +69,8 @@ const Hero = () => {
               duration: 25,
               ease: "linear",
             }}
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
       </div>

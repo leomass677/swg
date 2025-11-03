@@ -29,12 +29,14 @@ const ScrollVideoEffect = () => {
     >
       {/* Sticky video background */}
       <video
-        src={video.AI_medium}
+        src={video.AI_Tiny}
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-screen object-cover sticky top-0 z-0"
+        preload="auto"
+        className="w-full h-[100vh] sm:h-[90vh] md:h-[80vh] lg:h-[100vh] object-cover sticky top-0 z-0"
+        style={{ maxHeight: "100vh" }}
       />
 
       {/* Scrolling content blocks */}

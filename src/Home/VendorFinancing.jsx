@@ -19,6 +19,8 @@ const VendorFinancing = () => {
       >
         <img
           src={images.Gemini_5}
+          loading="lazy"
+          decoding="async"
           alt="Vendor Financing"
           className="w-full max-w-[90%] h-full max-h-[350px] rounded-2xl object-cover shadow-lg"
         />

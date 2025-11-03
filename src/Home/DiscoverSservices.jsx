@@ -100,6 +100,8 @@ const DiscoverSservices = () => {
               <motion.img
                 src={item.textImg}
                 alt={item.title}
+                loading="lazy"
+                decoding="async"
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
@@ -128,6 +130,8 @@ const DiscoverSservices = () => {
                 <img
                   src={item.img}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-1/2 h-auto object-cover"
                 />
                 <div className="flex-1 flex flex-col justify-between py-6 px-2 text-start">
