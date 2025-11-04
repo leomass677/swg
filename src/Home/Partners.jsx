@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
 import images from "../assets/images";
+import { div, img } from "framer-motion/client";
 
 const Partners = () => {
   const partner = [
@@ -22,40 +22,33 @@ const Partners = () => {
   ];
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
-      <div className="flex flex-col gap-6 md:gap-8 max-w-[1440px] mx-auto">
-        {/* Header */}
-        <div className="flex flex-col gap-4 justify-center items-center text-center">
-          <h3 className="text-3xl sm:text-4xl font-Tinos font-bold">
-            Our Partners
-          </h3>
-          <span className="leading-snug max-w-3xl text-lg sm:text-xl text-gray-700">
+    <div className="w-full">
+      {" "}
+      <div className="flex flex-col p-8 lg:px-0 gap-6 md:gap-8 lg:12 w-full max-w-[1440px] mx-auto">
+        <div className="flex flex-col gap-4 justify-center items-center">
+          {" "}
+          <h3 className="text-3xl font-Euclid font-bold">Our Partners</h3>
+          <span className="leading-snug max-w-3xl text-center text-xl">
             Our close alliance with global industry leaders allows us to offer
             our clients cutting-edge technology, robust security measures, and
             timely support.
           </span>
         </div>
 
-        {/* Partner Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 py-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 py-4 gap-4 md:gap-6 lg:gap-8 ">
           {partner.map((item, key) => (
-            <motion.div
+            <div
               key={key}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: key * 0.05 }}
-              className="flex items-center justify-center py-4 rounded-md shadow-md border border-white bg-shade"
+              className="flex items-center  transition-all duration-800 hover:rounded-none ease-out bg-shade hover:bg-gray-400/40  group cursor-pointer relative overflow-hidden justify-center py-4 rounded-xl shadow-md border-white border"
             >
               <img
                 src={item.img}
                 alt={`Partner ${key}`}
+                className="h-12 cursor-pointer grayscale-100 group-hover:grayscale-0 transition-all duration-1000 ease-out group-hover:scale-110 group-hover:opacity-100 opacity-80 scale-95 object-contain w-20 md:w-24 lg:w-30 xl:w-35"
                 loading="lazy"
                 decoding="async"
-                className="h-12 w-20 sm:w-24 lg:w-28 xl:w-32 object-contain cursor-pointer"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -10,7 +10,7 @@ const Global = () => {
     <div className="text-shade relative">
       <ScrollVideoEffect />
 
-      {/* Background Section with Overlay */}
+      {/* Bg Section with Overlay */}
       <div
         className="relative px-4 sm:px-6 lg:px-12 py-20"
         style={{
@@ -20,12 +20,12 @@ const Global = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Semi-transparent overlay */}
+        {/* overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-teal-500/5 to-cyan-300/40 blur backdrop-blur-xs z-0"></div>
 
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-[1440px] flex flex-col gap-16">
-          {/* Header */}
+          {/* first Header */}
           <h4 className="text-2xl sm:text-3xl lg:text-4xl leading-relaxed max-w-md sm:max-w-xl xl:max-w-2xl">
             Breaking barriers & delivering value for 10+ years.
           </h4>
@@ -40,10 +40,10 @@ const Global = () => {
               ].map((stat, index) => (
                 <p
                   key={index}
-                  className="flex flex-col gap-1 text-3xl sm:text-4xl font-Tinos font-semibold"
+                  className="flex flex-col gap-1 text-3xl sm:text-4xl font-semibold"
                 >
                   {stat.value}
-                  <span className="text-sm sm:text-base font-inter font-medium">
+                  <span className="text-sm sm:text-base  font-medium">
                     {stat.label}
                   </span>
                 </p>
@@ -63,7 +63,7 @@ const Global = () => {
             </div>
           </div>
 
-          {/* Map + Badges */}
+          {/* Map + Badge */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -75,9 +75,11 @@ const Global = () => {
               src={icons.map}
               alt="Global map"
               className="w-full max-w-4xl object-contain"
+              loading="lazy"
+              decoding="async"
             />
 
-            {/* Responsive badge positions */}
+            {/* badge s */}
             {[
               { top: "top-[20%]", left: "left-[30%]" },
               { top: "top-[25%]", left: "left-[50%]" },
@@ -97,7 +99,7 @@ const Global = () => {
               { top: "top-[95%]", left: "left-[80%]" },
               { top: "top-[100%]", right: "right-[20%]" },
               { top: "top-[105%]", right: "right-[10%]" },
-              { top: "top-[110%]", left: "left-[80%]" },
+              { top: "top-[91%]", left: "left-[80%]" },
             ].map((pos, index) => (
               <AvailabilityBadge
                 key={index}

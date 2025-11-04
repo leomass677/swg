@@ -33,7 +33,7 @@ const VendorFinancing = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex-1 flex flex-col gap-6"
       >
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-Tinos font-bold text-gray-700">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-Euclid font-bold text-gray-700">
           <span className="text-blue-500">Zero Cost</span> / Vendor Financing
         </h3>
         <p className="text-gray-700 text-base sm:text-lg leading-snug">

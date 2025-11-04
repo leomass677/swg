@@ -60,6 +60,10 @@ import BisGif2 from "./images/Microsoft 365 - Automated Provisioning.lottie";
 import BisGif3 from "./images/world.lottie";
 import BisGif4 from "./images/Information Technology.lottie";
 import BisGif5 from "./images/Animated Dashboards.lottie";
+import hero_ball from "./images/hero_ball.png";
+import hero_ball_dot from "./images/hero_ball_dot.png";
+import heroS from "./images/heroCome.png";
+import Hero_cross from "./images/Hero_cross.png";
 
 const images = {
   hero_image,
@@ -122,6 +126,10 @@ const images = {
   BisGif3,
   BisGif4,
   BisGif5,
+  heroS,
+  hero_ball,
+  hero_ball_dot,
+  Hero_cross,
 };
 
 export default images;

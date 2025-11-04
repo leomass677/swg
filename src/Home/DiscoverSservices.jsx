@@ -118,7 +118,7 @@ const DiscoverSservices = () => {
                 {item.title}
               </motion.p>
 
-              {/* Decorative Shape */}
+              {/*Shape */}
               <div className="size-16 bg-blue-200 rounded-4xl absolute -top-8 -right-8 skew-30"></div>
 
               {/* Hover Overlay */}

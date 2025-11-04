@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Euclid+Circular:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Euclid Circular", sans-serif;
+}
 
 @import "tailwindcss";
 
 html {
   font-size: 16px;
-  font-family: var(--font-inter);
+  font-family: var(--font-Euclid);
   background-color: var(--color-shade);
   color: var(--color-grey-900);
   transition: font-size 0.3s ease, scroll-padding-top 0.3s ease,
@@ -71,6 +77,7 @@ html {
   --font-Dm-serif: "DM Serif Text", serif;
   --font-inter: "Inter", sans-serif;
   --font-Dm-sans: "DM Sans", sans-serif;
+  --font-Euclid: "Euclid Circular", sans-serif;
 
   /* Nevy-Green */
   --color-primary-50: #d6dbd6;

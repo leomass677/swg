@@ -102,7 +102,7 @@ export default function Header() {
             <AvailabilityBadge />
           </div>
 
-          {/* CTA Button */}
+          {/* CTA  butto */}
           <a
             href="/signup"
             className="hidden sm:inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:scale-105 transition-all duration-500 text-sm font-medium hover:bg-blue-700"
@@ -119,7 +119,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Dropdown Menu */}
+        {/* Dropdown */}
         {isHover && (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -175,7 +175,7 @@ export default function Header() {
           </motion.div>
         )}
 
-        {/* Mobile Menu */}
+        {/* Mobile/md Menu */}
         {isOpen && (
           <div className="lg:hidden bg-shade shadow-md px-4 py-6 space-y-6">
             {navItems.map((nav) => (

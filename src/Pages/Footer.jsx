@@ -88,13 +88,19 @@ const Footer = () => {
   const toggleReadMore = () => setIsExpanded((prev) => !prev);
 
   return (
-    <footer className="px-4 sm:px-8 lg:px-18 py-12 relative border-t border-gray-200 shadow-lg bg-shade">
+    <footer className="px-4 sm:px-8 lg:px-18 py-12 relative border-t border-gray-200 shadow-lg bg-gray-100">
       <motion.div className="w-full flex flex-col gap-8 mx-auto max-w-[1440px]">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-8">
           {/* Logo and Description */}
           <div className="flex-1 flex flex-col gap-4">
-            <img src={icons.logo} alt="logo" className="w-36" />
+            <img
+              src={icons.logo}
+              alt="logo"
+              className="w-36"
+              loading="lazy"
+              decoding="async"
+            />
             <div className="flex flex-col gap-2">
               <p className="text-sm leading-relaxed text-gray-800 font-normal">
                 <span className="text-blue-500">SW GLOBAL</span>{" "}
@@ -109,7 +115,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Nav */}
           <div className="flex-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {navItems.map((nav, key) => (
               <ul key={key}>
@@ -140,7 +146,13 @@ const Footer = () => {
           </span>
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center">
             {displayedItems.map((list, index) => (
-              <img key={index} src={list.img} className="w-20 object-contain" />
+              <img
+                key={index}
+                src={list.img}
+                className="w-20 object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </ul>
           {partner.length > count && (
@@ -154,7 +166,7 @@ const Footer = () => {
           )}
         </div>
 
-        {/* Footer Bottom */}
+        {/* Footer Bottom with small hr */}
         <div className="flex flex-col sm:flex-row justify-between items-center text-sm font-medium text-gray-700 gap-2 sm:gap-0">
           <p className="text-center font-normal text-gray-800 sm:text-left">
             © {year} Mag Group Limited <span>swglobal.com</span>
@@ -173,7 +185,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Email Input Bar */}
+        {/* Email Input  */}
         <div className="absolute left-1/2 -translate-x-1/2 -top-6 w-full max-w-full sm:max-w-md flex justify-between bg-gray-500 rounded-full p-0.5 overflow-hidden border border-gray-50 h-12">
           <input
             type="text"

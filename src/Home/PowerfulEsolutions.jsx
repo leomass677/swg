@@ -1,20 +1,22 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { FcWorkflow } from "react-icons/fc";
+import { FaDragon } from "react-icons/fa";
 import images from "../assets/images";
+import { motion } from "framer-motion";
 import WorkWithYouLink from "../component/WorkWithYouLink";
 
 const PowerfulEsolutions = () => {
   return (
-    <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-24 bg-blue-50">
-      <div className="relative flex flex-col-reverse md:flex-row items-center gap-10 mx-auto max-w-[1440px] w-full overflow-hidden">
+    <section className="py-12 px-6 md:px-12 lg:px-24 bg-blue-50">
+      <div className="relative flex flex-col-reverse md:flex-row items-center gap-10 mx-auto max-w-[1440px]   overflow-hidden w-full my-6">
         {/* Left Section */}
         <motion.div
-          className="flex-1 flex flex-col gap-6 text-center md:text-left"
+          className="flex-2 flex flex-col gap-6 text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-gray-800 font-Tinos font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight max-w-3xl mx-auto md:mx-0">
+          <h2 className="text-gray-800 font-Euclid font-bold text-2xl sm:text-3xl lg:text-3xl xl:text-4xl leading-tight max-w-3xl mx-auto md:mx-0">
             Engineering powerful E-Solutions for emerging markets
           </h2>
 
@@ -27,9 +29,10 @@ const PowerfulEsolutions = () => {
 
             {/* Circles */}
             <div className="flex">
-              <span className="size-8 sm:size-10 rounded-full bg-blue-500"></span>
-              <span className="size-8 sm:size-10 rounded-full bg-crayola-600 -translate-x-5"></span>
-              <span className="size-8 sm:size-10 rounded-full bg-blue-100 -translate-x-8"></span>
+              <span className="size-8 sm:size-10 rounded-full bg-blue-400"></span>
+              <span className="size-8 sm:size-10 rounded-full bg-crayola-600 -translate-x-1"></span>
+              <span className="size-8 sm:size-10 rounded-full bg-primary-400 -translate-x-2"></span>
+              <span className="size-8 sm:size-10 rounded-full bg-gray-400 -translate-x-3"></span>
             </div>
           </div>
 
@@ -40,43 +43,52 @@ const PowerfulEsolutions = () => {
           </div>
         </motion.div>
 
-        {/* Right Section */}
+        {/* Right Section  */}
         <motion.div
-          className="flex-1 relative grid grid-cols-2 gap-2 p-6 sm:p-10 place-items-end w-full h-full"
+          className="flex-1 relative grid grid-cols-2 gap-1.5 p-10 place-items-end w-full h-full justify-center items-center"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Center Circle */}
           <img
             src={images.circles}
             alt="Animated circles"
-            className="absolute top-1/2 left-1/2 w-24 sm:w-32 lg:w-40 -translate-x-1/2 -translate-y-1/2 shadow rounded-full p-4 md:p-6"
+            className="absolute top-1/2 left-1/2 w-35 b  -translate-x-1/2 -translate-y-1/2 shadow rounded-full p-4 md:p-6"
+            loading="lazy"
+            decoding="async"
           />
 
           {/* Top */}
           <img
             src={images.Gemini_1}
             alt="Gemini 1"
-            className="w-16 sm:w-24 lg:w-40 h-16 sm:h-24 lg:h-40 object-cover shadow-2xl rounded-b-md rounded-tr-3xl rounded-tl-full hover:rounded-tl-none hover:scale-105 transition-all duration-200 ease-in-out cursor-pointer"
+            className=" w-[10px] sm:w-[50px] lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover shadow-2xl rounded-b-md rounded-tr-3xl rounded-tl-full hover:rounded-tl-none hover:scale-105 transition-all duration-75 cursor-pointer ease-in-out"
+            loading="lazy"
+            decoding="async"
           />
           {/* Left */}
           <img
             src={images.automaion_service}
             alt="Automation service"
-            className="w-16 sm:w-24 lg:w-40 h-16 sm:h-24 lg:h-40 object-cover shadow-2xl rounded-r-md rounded-tl-3xl rounded-tr-full hover:rounded-tr-none hover:scale-105 transition-all duration-200 ease-in-out cursor-pointer place-self-start"
+            className=" w-[10px] sm:w-[50px] place-self-start lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover shadow-2xl rounded-r-md rounded-tl-3xl rounded-tr-full hover:rounded-tr-none hover:scale-105 transition-all duration-75 cursor-pointer ease-in-out"
+            loading="lazy"
+            decoding="async"
           />
           {/* Right */}
           <img
             src={images.Gemini_4}
             alt="Gemini 4"
-            className="w-16 sm:w-24 lg:w-40 h-16 sm:h-24 lg:h-40 object-cover shadow-2xl rounded rounded-bl-full hover:rounded-bl-none hover:scale-105 transition-all duration-200 ease-in-out cursor-pointer"
+            className="w-[10px] sm:w-[50px]  lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover shadow-2xl rounded rounded-bl-full hover:rounded-bl-none hover:scale-105 transition-all duration-75 cursor-pointer ease-in-out"
+            loading="lazy"
+            decoding="async"
           />
           {/* Bottom */}
           <img
             src={images.Gemini_5}
             alt="Gemini 5"
-            className="w-20 sm:w-24 lg:w-40 h-16 sm:h-24 lg:h-40 object-cover shadow-2xl rounded-t-md rounded-bl-3xl rounded-br-full hover:rounded-br-none hover:scale-105 transition-all duration-200 ease-in-out cursor-pointer place-self-start"
+            className="  w-[30px] place-self-start sm:w-[50px] lg:w-[180px] h-[10px] sm:h-[50px] lg:h-[180px] object-cover  rounded-t-md rounded-bl-3xl shadow-2xl rounded-br-full hover:rounded-br-none hover:scale-105 transition-all duration-75  cursor-pointer ease-in-out"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
       </div>
