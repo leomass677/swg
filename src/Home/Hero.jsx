@@ -6,6 +6,7 @@ import images from "../assets/images";
 import WorkWithYouLink from "../component/WorkWithYouLink";
 import { X } from "lucide-react";
 import { img } from "framer-motion/client";
+import { AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   const heroImage = [
@@ -25,7 +26,7 @@ const Hero = () => {
   }, [heroImage.length]);
 
   return (
-    <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-4 py-8 xl:min-h-[50vh] sm:px-6 lg:px-12 xl:px-0 mt-20 w-full xl:py-16 max-w-[1440px] mx-auto">
+    <section className="relative flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-4 py-8 xl:min-h-[50vh] sm:px-6 lg:px-12 xl:px-12 mt-20 w-full xl:py-16 max-w-[1440px] mx-auto">
       {/* Left Section */}
       <motion.div
         className="flex-1 text-center md:text-left"
@@ -47,18 +48,19 @@ const Hero = () => {
       {/* Right Sectin*/}
       <div className="flex-1 gap-1 lg:gap-16   relative lg:static flex justify-center md:justify-end items-center w-full">
         {/* Rotating  */}
-        <motion.img
-          src={heroImage[imgIndex].img}
-          alt="Hero"
-          className="w-56 sm:w-72 md:w-80 lg:w-96 xl:max-w-[22rem]   xl:w-[22rem] 2xl:w-[24rem] z-20 h-auto object-cover drop-shadow-lg"
-          initial={{ scale: 0, opacity: 0, x: -100, y: -100 }}
-          whileInView={{ scale: 1, opacity: 100, x: 0, y: 0 }}
-          animate={{ rotate: 360 }}
-          whileHover={{ scale: 1.03 }}
-          transition={{
-            rotate: { repeat: Infinity, duration: 15, ease: "linear" },
-          }}
-        />
+        <AnimatePresence mode="wait">
+          <motion.img
+            src={heroImage[imgIndex].img}
+            alt="Hero"
+            className="w-56 sm:w-72 md:w-80 lg:w-96 xl:max-w-[23rem] xl:h-full xl:max-h-[320px]   xl:w-[22rem] 2xl:w-[24rem] z-20 h-auto object-cover drop-shadow-lg"
+            initial={{ scale: 0, opacity: 0, x: -100, y: -100 }}
+            whileInView={{ scale: 1, opacity: 100, x: 0, y: 0 }}
+            animate={{ rotate: 360 }}
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          />
+        </AnimatePresence>
+
         <div className=" flex flex-col gap-4">
           {" "}
           {heroImage.map((item, index) => (
@@ -66,6 +68,12 @@ const Hero = () => {
               <motion.button
                 onClick={() => setImgIndex(index)}
                 whileTap={{ scale: 0.8 }}
+                whileHover={{
+                  scale: 1.1,
+                  x: 20,
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
                 className="flex justify-center items-center rounded-full cursor-pointer"
               >
                 <img
@@ -98,7 +106,6 @@ const Hero = () => {
               duration: 25,
               ease: "linear",
             }}
-            translate={{}}
           />
         </motion.div>
       </div>

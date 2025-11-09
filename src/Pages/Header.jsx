@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import AvailabilityBadge from "../Animation/AvailabilityBadge";
-import icons from "../assets/icons";
 import { GoChevronRight } from "react-icons/go";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import AvailabilityBadge from "../Animation/AvailabilityBadge";
+import icons from "../assets/icons";
 
 const navItems = [
   {
     label: "About US",
     items: [
-      { label: "About SWG", href: "/design" },
+      { label: "About SWG", href: "/about" },
       { label: "History", href: "/prototyping" },
       { label: "Vision, Mission & Values", href: "/collaboration" },
       { label: "People, Performance & Culture", href: "/handoff" },
@@ -86,32 +87,45 @@ export default function Header() {
     <div className="fixed w-full z-50">
       <header className="bg-shade shadow-sm sticky top-0 left-0 w-full">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 h-16 flex items-center justify-between">
-          <img src={icons.logo} alt="SWG Logo" className="w-28 sm:w-36" />
+          <Link to="/">
+            <img src={icons.logo} alt="SWG Logo" className="w-28 sm:w-36" />
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8 bg-blue-100/40 backdrop-blur-xs px-8 py-2 rounded-4xl">
-            <p className="flex items-center cursor-pointer text-sm">
+            <Link
+              onClick={() => {
+                setIsHover(false);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              to="/"
+              className="flex hover:font-medium transition-all duration-300 ease-in-out p-1 rounded-l-full  items-center cursor-pointer text-sm"
+            >
               Home <MdOutlineKeyboardArrowRight />
-            </p>
+            </Link>
+
             <li
               onMouseEnter={() => setIsHover(true)}
               className="flex items-center h-full cursor-pointer text-sm"
+              tabIndex={0}
             >
               Menu <MdOutlineKeyboardArrowRight />
             </li>
+
             <AvailabilityBadge />
           </div>
 
-          {/* CTA  butto */}
-          <a
-            href="/signup"
+          {/* CTA button */}
+          <Link
+            to="/signup"
             className="hidden sm:inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:scale-105 transition-all duration-500 text-sm font-medium hover:bg-blue-700"
           >
             Get Started
-          </a>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
+            aria-expanded={isOpen}
             className="lg:hidden text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -119,7 +133,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Dropdown */}
+        {/* Dropdown (Desktop) */}
         {isHover && (
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -137,14 +151,15 @@ export default function Header() {
                   </h6>
                   <div className="flex flex-col gap-2">
                     {nav.items.map((item) => (
-                      <a
+                      <Link
+                        onClick={() => setIsHover(false)}
                         key={item.label}
-                        href={item.href}
+                        to={item.href}
                         className="text-gray-700 flex items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1"
                       >
                         {item.label}
                         <GoChevronRight className="ml-1 scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </ul>
@@ -158,14 +173,15 @@ export default function Header() {
                     </h6>
                     <div className="flex flex-col gap-2">
                       {navItem.items.map((item) => (
-                        <a
+                        <Link
+                          onClick={() => setIsHover(false)}
                           key={item.label}
-                          href={item.href}
+                          to={item.href}
                           className="text-gray-700 group flex items-center hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1"
                         >
                           {item.label}
                           <GoChevronRight className="ml-1 scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </ul>
@@ -175,7 +191,7 @@ export default function Header() {
           </motion.div>
         )}
 
-        {/* Mobile/md Menu */}
+        {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden bg-shade shadow-md px-4 py-6 space-y-6">
             {navItems.map((nav) => (
@@ -183,23 +199,24 @@ export default function Header() {
                 <p className="text-blue-600 font-semibold mb-2">{nav.label}</p>
                 <div className="space-y-2">
                   {nav.items.map((item) => (
-                    <a
+                    <Link
                       key={item.label}
-                      href={item.href}
+                      to={item.href}
                       className="block text-gray-700 hover:text-blue-600 text-sm"
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
             ))}
-            <a
-              href="/signup"
+
+            <Link
+              to="/signup"
               className="block bg-blue-600 text-white text-center py-2 rounded-full hover:bg-blue-700"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         )}
       </header>
