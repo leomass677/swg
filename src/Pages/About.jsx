@@ -18,7 +18,11 @@ import icons from "../assets/icons";
 import WorkWithYouLink from "../component/WorkWithYouLink";
 import AvailabilityBadge from "../Animation/AvailabilityBadge";
 import TeamMember from "../component/TeamMember";
-
+import { img } from "framer-motion/client";
+import { GiTeamIdea, GiBrain, GiRunningNinja, GiSkills } from "react-icons/gi";
+import { FaUsersRays } from "react-icons/fa6";
+import { PiHandshakeThin } from "react-icons/pi";
+import { IoCheckmarkDone } from "react-icons/io5";
 const About = () => {
   // Animation variants
   const containerVariants = {
@@ -53,12 +57,6 @@ const About = () => {
   };
 
   // Data
-  const stats = [
-    { icon: Users, number: "450+", label: "Team Members" },
-    { icon: Globe, number: "15+", label: "Countries" },
-    { icon: Award, number: "50+", label: "Awards Won" },
-    { icon: Clock, number: "10+", label: "Years Experience" },
-  ];
 
   const values = [
     {
@@ -89,28 +87,38 @@ const About = () => {
   const milestones = [
     {
       year: "2014",
-      event: "Company Founded",
-      description: "Started with a vision to transform digital landscape",
+      event: "Teamwork",
+      description: <GiTeamIdea />,
     },
     {
       year: "2016",
-      event: "First Major Contract",
-      description: "Secured government digital transformation project",
+      event: "Integrity",
+      description: <GiBrain />,
     },
     {
       year: "2018",
-      event: "International Expansion",
-      description: "Opened offices in 3 new countries",
+      event: "Leadership",
+      description: <GiRunningNinja />,
     },
     {
-      year: "2020",
-      event: "Product Suite Launch",
-      description: "Launched our flagship product portfolio",
+      year: "",
+      event: "Innovation",
+      description: <GiSkills />,
     },
     {
       year: "2023",
-      event: "Global Recognition",
-      description: "Awarded Best Tech Innovation Company",
+      event: "Customer Centricity",
+      description: <FaUsersRays />,
+    },
+    {
+      year: "2023",
+      event: "Excellence",
+      description: <IoCheckmarkDone />,
+    },
+    {
+      year: "2023",
+      event: "Partnership",
+      description: <PiHandshakeThin />,
     },
   ];
 
@@ -157,11 +165,65 @@ const About = () => {
             className="flex flex-wrap justify-center gap-4"
           >
             <WorkWithYouLink className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300" />
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center gap-2">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-2.5 cursor-pointer rounded-full font-semibold text-lg transition-all duration-300 flex items-center gap-2">
               Our Story <ArrowRight size={20} />
             </button>
           </motion.div>
         </motion.div>
+      </section>
+      {/*Who We Are  */}
+      <section className="relative">
+        <div className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto">
+          <h1 className="text-3xl text-center ">Who We Are</h1>
+          <div className="flex flex-wrap justify-center mt-8 w-full lg:max-w-4xl mx-auto xl:max-w-5xl">
+            {[
+              "Digital Transformation",
+              "Innovation",
+              "IT consulting",
+              "Security Solutions",
+              "Vendor Financing",
+              "Training & Support",
+              "Bespoke Technology Solutions",
+              "Infrastructure Services",
+              "Application Services",
+            ].map((item, index) => (
+              <button
+                key={index}
+                className="py-2 px-4 rounded-full border-grey-400 shadow-sm bg-transparent cursor-pointer scale-95 hoverscale-105 transition-all duration-500 m-2 border-2 text-gray-700 font-medium"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+          <div className="flex gap-8 mt-12 flex-col lg:flex-row-reverse items-center">
+            <div className="flex-1  flex flex-col  items-center lg:items-start lg:justify-end-safe gap-4 lg:gap-6 xl:gap-8">
+              <img
+                src={images.powerfull}
+                alt=""
+                className=" self-end xl:absolute -bottom-14 shadow-md   shadow-shade/15  max-w-[70%] max-h-[500px] object-cover xl:pr-8  "
+              />
+            </div>
+            <div className="flex-1 flex flex-col gap-4 lg:gap-6 xl:gap-8 mt-4 lg:mt-6 xl:mt-12 text-lg md:text-xl text-gray-700 leading-relaxed">
+              <h6 className="text-2xl font-semibold mb-4">
+                SW Global Limited is an Application Service Provider (ASP) and a
+                leading provider of software solutions and IT infrastructure.
+              </h6>
+              <p className="">
+                We are passionate about technology, especially when it comes to
+                helping businesses achieve digital transformation, and take
+                pride in offering a wide range of services and solutions
+                tailored to meet our clients' needs at any stage of their
+                business lifecycle.
+              </p>
+              <p>
+                Our IT solutions are designed with a focus on ease of use and
+                functionality and our services are delivered with extensive
+                experience and expertise.
+              </p>
+              <WorkWithYouLink className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300" />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Timeline Section */}
@@ -175,7 +237,7 @@ const About = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              Our <span className="text-cyan-400">Journey</span>
+              Our <span className="text-cyan-400">Our Values</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Milestones that mark our growth and impact over the years.
@@ -184,28 +246,36 @@ const About = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-cyan-500 h-full"></div>
+            <div className="absolute left-1/2  transform -translate-x-1/2 w-1 bg-cyan-500 h-full"></div>
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className={`relative flex items-center ${
+                  className={`relative  flex items-center ${
                     index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                   }`}
                 >
                   <div
                     className={`w-1/2 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
                   >
-                    <div className="bg-gray-800 p-6 rounded-2xl hover:bg-gray-700 transition-colors duration-300">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">
+                    <div
+                      className={`bg-gray-800 shadow-2xl cursor-pointer transition-all ease-in-out duration-600  p-6 flex rounded-2xl items-center justify-start gap-4 sm:gap-5 md:gap-6 xl:gap-12 py-8 hover:bg-gray-700   hover:border-shade   ${
+                        index % 2 === 0
+                          ? "hover:translate-x-8"
+                          : "hover:-translate-x-8"
+                      }`}
+                    >
+                      {/* <div className="text-cyan-400 font-bold text-lg mb-2">
                         {milestone.year}
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">
+                      </div> */}
+                      <h3 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-medium mb-2 text-cyan-400 text-2xl">
                         {milestone.event}
                       </h3>
-                      <p className="text-gray-300">{milestone.description}</p>
+                      <p className="text-gray-300 text-5xl md:text-6xl xl:text-7xl ">
+                        {milestone.description}
+                      </p>
                     </div>
                   </div>
 
@@ -236,9 +306,6 @@ const About = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <WorkWithYouLink className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300" />
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300">
-              View Case Studies
-            </button>
           </div>
         </motion.div>
       </section>

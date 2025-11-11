@@ -67,7 +67,7 @@ const Global = () => {
     <div className="text-shade relative overflow-hidden">
       <ScrollVideoEffect />
 
-      {/* Background Section with Enhanced Overlay */}
+      {/* Background S  */}
       <div
         className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-16 sm:py-20 lg:py-24"
         style={{
@@ -78,10 +78,8 @@ const Global = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Enhanced Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-teal-500/10 to-cyan-300/20 backdrop-blur-sm z-0"></div>
 
-        {/* Additional overlay for better text readability */}
         <div className="absolute inset-0 bg-black/10 z-0"></div>
 
         {/* Main Content Container */}
@@ -216,11 +214,7 @@ const Global = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-center mt-8 lg:mt-12"
-            >
-              <p className="text-sm sm:text-base text-gray-300 font-light">
-                Hover over the markers to explore our global presence
-              </p>
-            </motion.div>
+            ></motion.div>
           </motion.div>
         </motion.div>
       </div>
