@@ -10,6 +10,16 @@ import footer_bg from "../assets/icons/footer_bg.svg";
 import breaking_barriers_bg from "../assets/icons/breaking_barriers_bg.svg";
 import discover_services_bg from "../assets/icons/discover_services_bg.svg";
 import arrow_down from "../assets/icons/arrow_down.svg";
+import customer_centricity from "../assets/icons/customer-centricity.png";
+import excellence from "../assets/icons/excellence.png";
+import Handshake from "../assets/icons/Handshake.svg";
+import integrity from "../assets/icons/integrity.png";
+import leadership from "../assets/icons/leadership.png";
+import mission from "../assets/icons/mission.png";
+import mission_vision from "../assets/icons/mission-vision-bg.svg";
+import teamwork from "../assets/icons/teamwork.png";
+import values from "../assets/icons/values.png";
+import vision from "../assets/icons/vision.png";
 
 const icons = {
   logo,
@@ -24,6 +34,16 @@ const icons = {
   breaking_barriers_bg,
   discover_services_bg,
   arrow_down,
+  customer_centricity,
+  excellence,
+  Handshake,
+  integrity,
+  leadership,
+  mission,
+  mission_vision,
+  teamwork,
+  values,
+  vision,
 };
 
 export default icons;

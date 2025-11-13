@@ -104,16 +104,15 @@ const Footer = () => {
               decoding="async"
             />
             <div className="flex flex-col gap-2">
-              <p className="text-sm leading-relaxed text-gray-800 font-normal">
-                <span className="text-blue-500">SW GLOBAL</span>{" "}
-                {isExpanded ? text : `${text.slice(0, maxLength)}...`}
+              <p className="text-sm leading-relaxed  text-gray-800 font-normal">
+                <span className="text-blue-500">SW GLOBAL</span> {text}
               </p>
-              <button
+              {/* <button
                 className="text-sm w-fit cursor-pointer hover:scale-105 transition-all duration-500 rounded-md border border-gray-300 px-4 py-1"
                 onClick={() => setIsExpanded((prev) => !prev)}
               >
                 {isExpanded ? "Read less" : "Read More"}
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -143,7 +142,7 @@ const Footer = () => {
         </div>
 
         {/* Partners Section */}
-        <div className="flex flex-col gap-4">
+        {/* <div className="flex flex-col gap-4">
           <span className="text-sm font-medium border-b border-gray-200 pb-2 text-gray-700">
             Our Partners:
           </span>
@@ -168,10 +167,10 @@ const Footer = () => {
               <GoChevronRight className="scale-0 opacity-0 -translate-x-2 group-hover:scale-105 group-hover:opacity-100 group-hover:translate-x-0 duration-300 transition-all ease-in-out" />
             </button>
           )}
-        </div>
+        </div> */}
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center text-sm font-medium text-gray-700 gap-2 sm:gap-0">
+        <div className="flex border-t-2 border-t-gray-300 pt-6 flex-col sm:flex-row justify-between items-center text-sm font-medium text-gray-700 gap-2 sm:gap-0">
           <p className="text-center font-normal text-gray-800 sm:text-left">
             © {year} Mag Group Limited <span>swglobal.com</span>
           </p>
