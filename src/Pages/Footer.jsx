@@ -30,15 +30,15 @@ const Footer = () => {
     {
       label: "Services",
       items: [
-        { label: "Digital Commerce", href: "/digital-commerce" },
-        { label: "IT Consulting", href: "/it-consulting" },
-        { label: "Application Service Provider", href: "/asp" },
-        { label: "Automation Service", href: "/automation" },
-        { label: "Customer Experience", href: "/cx" },
-        { label: "Infrastructure Service", href: "/infrastructure" },
+        { label: "Digital Commerce", href: "/service" },
+        { label: "IT Consulting", href: "/service" },
+        { label: "Application Service Provider", href: "/service" },
+        { label: "Automation Service", href: "/service" },
+        { label: "Customer Experience", href: "/service" },
+        { label: "Infrastructure Service", href: "/service" },
         { label: "Security Solutions", href: "/security" },
-        { label: "Sustainability Consulting", href: "/sustainability" },
-        { label: "Bespoke Innovation", href: "/innovation" },
+        { label: "Sustainability Consulting", href: "/service" },
+        { label: "Bespoke Innovation", href: "/service" },
       ],
     },
     {

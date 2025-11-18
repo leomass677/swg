@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 const Home = lazy(() => import("../Pages/Home"));
 const About = lazy(() => import("../Pages/About"));
 const NotFound = lazy(() => import("../Pages/NotFound"));
+const Service = lazy(() => import("../Pages/Services"));
 
 // Loading component
 const PageLoader = () => (
@@ -23,6 +24,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
