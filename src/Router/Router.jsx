@@ -6,6 +6,7 @@ const Home = lazy(() => import("../Pages/Home"));
 const About = lazy(() => import("../Pages/About"));
 const NotFound = lazy(() => import("../Pages/NotFound"));
 const Service = lazy(() => import("../Pages/Services"));
+const Products = lazy(() => import("../Pages/Products"));
 
 // Loading component
 const PageLoader = () => (
@@ -25,6 +26,8 @@ const Router = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/product" element={<Products />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

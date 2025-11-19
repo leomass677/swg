@@ -65,6 +65,7 @@ import hero_ball_dot from "./images/hero_ball_dot.png";
 import heroS from "./images/heroCome.png";
 import Hero_cross from "./images/Hero_cross.png";
 import who_are_we from "./images/whoarewe.png";
+import light from "./images/Light.png";
 
 const images = {
   hero_image,
@@ -132,6 +133,7 @@ const images = {
   hero_ball_dot,
   Hero_cross,
   who_are_we,
+  light,
 };
 
 export default images;
