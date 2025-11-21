@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GoChevronRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 import WorkWithYouLink from "../component/WorkWithYouLink";
+import images from "../assets/images";
 
 const ApplicationService = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -86,7 +87,7 @@ const ApplicationService = () => {
   return (
     <div
       id="applicationService"
-      className="min-h-screen text-shade bg-gradient-to-br from-slate-50 to-gray-100/80"
+      className="min-h-screen text-shade bg-gradient-to-br from-slate-50 py-16 to-gray-100/80"
     >
       <section className="mx-auto max-w-[1440px] flex gap-8 lg:gap-16 px-4 lg:px-8">
         {/*  Sidebar Navigation */}
@@ -145,11 +146,11 @@ const ApplicationService = () => {
         <div className="flex-1 mt-24 overflow-hidden">
           {/* Hero Sec */}
           <div className="bg-gradient-to-br from-gray-900 to-blue-900/90 rounded-3xl overflow-hidden shadow-2xl">
-            <div className="flex flex-col p-8 lg:p-16 pb-0 gap-8">
+            <div className="flex flex-col p-8 lg:p-16 pb-0 ">
               <div className={getAnimationClass("hero")}>
                 <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-                  Unlock Your Application's{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                  Unlock Your Application's <br className="" />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-400">
                     &#123; Full Potential &#125;
                   </span>
                 </h1>
@@ -174,10 +175,10 @@ const ApplicationService = () => {
                     {features.map((item, index) => (
                       <div
                         key={index}
-                        className="flex items-center gap-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group cursor-pointer mb-3 last:mb-0"
+                        className="flex items-center gap-4 p-4 rounded-xl bg-shade/5 backdrop-blur-sm border border-shade/10 hover:bg-shade/10 transition-all duration-300 group cursor-pointer mb-3 last:mb-0"
                       >
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-300" />
-                        <p className="text-gray-100 font-medium group-hover:text-white transition-colors duration-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full group-hover:scale-150 transition-transform duration-300" />
+                        <p className="text-gray-100 font-medium group-hover:text-shade transition-colors duration-300">
                           {item}
                         </p>
                       </div>
@@ -192,7 +193,7 @@ const ApplicationService = () => {
               <section
                 key={service.id}
                 id={service.id}
-                className="border-t border-white/10 group overflow-hidden relative min-h-[600px] flex items-center justify-center"
+                className="border-t border-shade/10 group overflow-hidden relative min-h-[600px] flex items-center justify-center"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent z-10" />
                 <img
@@ -211,11 +212,11 @@ const ApplicationService = () => {
                       : "lg:right-0 lg:bottom-90"
                   }`}
                 >
-                  <div className="bg-blue-100/70  backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/20">
-                    <h5 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  <div className="bg-shade/75  backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-shade/20">
+                    <h5 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
                       {service.name}
                     </h5>
-                    <p className="text-gray-700 leading-relaxed font-medium">
+                    <p className="text-gray-700 leading-relaxed text-sm leading-normal font-medium">
                       Comprehensive {service.name.toLowerCase()} solutions
                       tailored to your business needs. Our expert team delivers
                       cutting-edge technology and innovative approaches to drive
@@ -231,7 +232,7 @@ const ApplicationService = () => {
             ))}
 
             {/* Original Image Sections (keeping for reference) */}
-            <div className="border-t border-white/10 group overflow-hidden relative mt-12">
+            <div className="border-t border-shade/10 group overflow-hidden relative mt-12">
               <div className="absolute right-0 inset-0 bg-gradient-to-t from-gray-900/80 to-transparent z-10" />
               <img
                 src="https://cdn.pixabay.com/photo/2019/09/19/22/59/virtual-reality-4490469_1280.jpg"
@@ -239,10 +240,10 @@ const ApplicationService = () => {
                 className="w-full h-[500px] object-cover transition-all duration-700 ease-out group-hover:scale-105"
               />
               <div className={getAnimationClass("image1")}>
-                <div className="absolute bottom-8 left-8 right-8 lg:right-auto lg:left-8 lg:max-w-md z-20 bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl border border-white/20">
+                <div className="absolute bottom-8 left-8 right-8 lg:right-auto lg:left-8 lg:max-w-md z-20 bg-shade/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl border border-shade/20">
                   <h5 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                     Unlock Your Application's Full{" "}
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-blue-500 to-blue-500 bg-clip-text text-transparent">
                       Potential
                     </span>
                   </h5>
@@ -256,7 +257,7 @@ const ApplicationService = () => {
               </div>
             </div>
 
-            <div className="border-t border-white/10 group overflow-hidden relative">
+            <div className="border-t border-shade/10 group overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent z-10" />
               <img
                 src="https://cdn.pixabay.com/photo/2020/01/07/20/09/rubicks-4748483_1280.jpg"
@@ -264,7 +265,7 @@ const ApplicationService = () => {
                 className="w-full h-[500px] object-cover transition-all duration-700 ease-out group-hover:scale-105"
               />
               <div className={getAnimationClass("image2")}>
-                <div className="absolute bottom-8 right-8 left-8 lg:left-auto lg:right-8 lg:max-w-md z-20 bg-white/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl border border-white/20">
+                <div className="absolute bottom-8 right-8 left-8 lg:left-auto lg:right-8 lg:max-w-md z-20 bg-shade/95 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl border border-shade/20">
                   <h5 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                     Problem-Solver <span className="text-blue-500">Energy</span>
                   </h5>

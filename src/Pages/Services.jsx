@@ -15,7 +15,7 @@ const Services = () => {
       <section className="mt-16 flex flex-col">
         {" "}
         <DigitalCommerce />
-        <ITConsulting />
+        {/* <ITConsulting /> */}
         <ApplicationService />
         <Automated />
         {/* <CustomerExperience />
