@@ -29,10 +29,8 @@ const PowerfulEsolutions = () => {
 
             {/* Circles */}
             <div className="flex">
-              <span className="size-8 sm:size-10 rounded-full bg-blue-400"></span>
-              <span className="size-8 sm:size-10 rounded-full bg-crayola-600 -translate-x-1"></span>
-              <span className="size-8 sm:size-10 rounded-full bg-primary-400 -translate-x-2"></span>
-              <span className="size-8 sm:size-10 rounded-full bg-gray-400 -translate-x-3"></span>
+              <span className="size-8 sm:size-10   border-shade rounded-full bg-blue-400"></span>
+              <span className="size-8 sm:size-10 border-5 border-blue-400  rounded-full bg-crayola-600 -translate-x-1"></span>
             </div>
           </div>
 

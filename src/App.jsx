@@ -6,7 +6,7 @@ import Router from "./Router/Router";
 
 function App() {
   return (
-    <main className="max-w-screen mx-auto">
+    <main className="max-w-screen mx-auto  ">
       <Header className="sticky top-0" />
       <Router />
       <Footer />

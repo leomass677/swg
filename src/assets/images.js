@@ -66,6 +66,8 @@ import heroS from "./images/heroCome.png";
 import Hero_cross from "./images/Hero_cross.png";
 import who_are_we from "./images/whoarewe.png";
 import light from "./images/Light.png";
+import { div } from "framer-motion/client";
+import { data } from "react-router-dom";
 
 const images = {
   hero_image,

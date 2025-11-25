@@ -6,12 +6,12 @@ const WorkWithYouLink = ({
   label = "Let's work with you",
   bgColor = "bg-blue-400",
   hoverColor = "group-hover:bg-crayola-400",
-  onclick,
+  onClick,
   className,
 }) => {
   return (
     <a
-      onclick={onclick}
+      onClick={onClick}
       className={`flex relative items-center group max-w-fit ${className}`}
       href={href}
     >

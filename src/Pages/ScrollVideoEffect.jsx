@@ -10,7 +10,7 @@ const ContentBlock = ({ title, description }) => (
     viewport={{ once: true }}
     className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-8 text-center bg-black/40 backdrop-blur-sm"
   >
-    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-white max-w-4xl">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-shade max-w-4xl">
       {title}
     </h1>
     <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl text-gray-200">
@@ -25,7 +25,7 @@ const ScrollVideoEffect = () => {
   return (
     <section
       ref={scrollRef}
-      className="relative w-full h-screen bg-transparent text-white overflow-y-scroll no-scrollbar"
+      className="relative w-full h-screen bg-transparent text-shade overflow-y-scroll no-scrollbar"
     >
       {/* Sticky video background */}
       <video

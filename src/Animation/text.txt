@@ -97,7 +97,7 @@ export default function Home() {
       </MotionBox>
 
       <MotionBox type="zoom" delay={0.3} hover>
-        <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg">
+        <button className="px-6 py-3 bg-blue-600 text-shade rounded-lg shadow-lg">
           Hover Me
         </button>
       </MotionBox>

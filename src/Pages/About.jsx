@@ -139,7 +139,7 @@ const About = () => {
           backgroundAttachment: "fixed",
           minHeight: "450px",
         }}
-        className="py-8 relative xl:min-h-screen lg:py-16 px-4 h-full sm:px-6 lg:px-8 flex items-center "
+        className="py-8 relative xl:min-h-screen lg:py-16   h-full px-4 sm:px-6 lg:px-12 xl:px-12 flex items-center "
       >
         <div className="absolute top-0 left-0 w-full h-full bg-dark/35"></div>
         <a
@@ -156,7 +156,7 @@ const About = () => {
           <FaArrowDownLong />
         </a>
         <div className="max-w-[1440px] mx-auto flex">
-          <div className="w-full xl:max-w-3/5 xl:pl-12 xl:px-8 z-10">
+          <div className="w-full xl:max-w-3/5  z-10">
             <motion.h1
               variants={itemVariants}
               className="text-3xl font-semibold mb-6 leading-snug  text-start text-shade"
@@ -191,7 +191,7 @@ const About = () => {
         {/* img overlay */}
         <div className="w-full h-full absolute top-0 left-0  bg-shade/5  "></div>
 
-        <div className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto relative z-10">
+        <div className="py-16 lg:py-24 px-4 sm:px-6 lg:px-12 xl:px-12 max-w-[1440px] mx-auto relative z-10">
           <h1 className="text-3xl text-center text-shade font-semibold mb-4 lg:mb-8">
             Who We Are
           </h1>
@@ -234,7 +234,7 @@ const About = () => {
                 {/*  */}
                 <div className="absolute -left-23 -top-2 -z-20">
                   {" "}
-                  <div className="w-50 h-50 bg-linear-to-bl from-cyan-100/50 to-blue-600/80 backdrop-blur-xs border-gray-800 rotate-0 rounded-tl-full -top-20 right-0 rounded-full before:w-28   scale-50  before:rounded-br-full before:bg-grey-900 before:h-28 before before:content-[''] before:bottom-0 before:-right-4 before:absolute  relative"></div>
+                  <div className="w-50 h-50 bg-linear-to-bl from-blue-100/50 to-blue-600/80 backdrop-blur-xs border-gray-800 rotate-0 rounded-tl-full -top-20 right-0 rounded-full before:w-28   scale-50  before:rounded-br-full before:bg-grey-900 before:h-28 before before:content-[''] before:bottom-0 before:-right-4 before:absolute  relative"></div>
                 </div>
               </div>
             </div>
@@ -277,7 +277,7 @@ const About = () => {
         {/* img overlay */}
         <div className="w-1/2 h-full absolute top-0  right-0  bg-grey-900/60 backdrop-blur-md border-l border-b border-b-grey-900  border-l-grey-900   "></div>
 
-        <div className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto relative z-10">
+        <div className="py-16 lg:py-24 px-4 sm:px-6 lg:px-12 xl:px-12 max-w-[1440px] mx-auto relative z-10">
           <div className="flex gap-8 xl:pl-24 flex-col lg:flex-row  items-center">
             <div className="flex-1  flex flex-col  items-center lg:items-start lg:justify-end-safe gap-4 lg:gap-6 xl:gap-8"></div>
 
@@ -308,8 +308,8 @@ const About = () => {
       </section>
 
       {/* our value */}
-      <section className="py-16 relative lg:py-24  px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
-        <div className="flex flex-row flex-wrap gap-16 justify-between max-w-[1440px] mx-auto  mb-12 lg:mb-16">
+      <section className="py-16 relative lg:py-24  p    bg-gray-900 text-shade">
+        <div className="flex flex-row flex-wrap gap-16 justify-between max-w-[1440px] px-4 sm:px-6 lg:px-12 xl:px-12 mx-auto  mb-12 lg:mb-16">
           {ourValue.map((item, index) => {
             //Mission and Vision
             if (!item.value) {
@@ -386,7 +386,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 to-blue-950 text-white">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 to-blue-950 text-shade">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           variants={containerVariants}

@@ -35,7 +35,7 @@ const Automated = () => {
   return (
     <div className=" ">
       {" "}
-      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 to-blue-950 text-white">
+      <section className="py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 to-blue-950 text-shade">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           variants={containerVariants}
@@ -43,7 +43,7 @@ const Automated = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Transform Your Digital Journey?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
