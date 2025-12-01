@@ -4,6 +4,10 @@
 
 body {
   font-family: "Euclid Circular", sans-serif;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @import "tailwindcss";
@@ -34,7 +38,7 @@ html {
   left: 0;
   width: 250px;
   height: 100px;
-  background: white;
+  background: shade;
   border-bottom-right-radius: 40px;
 }
 
@@ -103,8 +107,8 @@ html {
   /* Dark */
   --color-dark: #0f0e0e;
 
-  /* white */
-  --color-white: #f3f3e0;
+  /* shade */
+  --color-shade: #f3f3e0;
 
   /* shade */
   --color-shade: #fcfcfd;

@@ -71,7 +71,7 @@ const DiscoverSservices = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-4 sm:px-6 lg:px-12 bg-white">
+    <section className="w-full py-20 px-4 sm:px-6 lg:px-12 bg-shade">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-16">
         {/* Header */}
         <div className="text-center flex flex-col items-center gap-4 px-4">

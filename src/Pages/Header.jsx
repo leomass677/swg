@@ -12,44 +12,44 @@ const navItems = [
     label: "About US",
     items: [
       { label: "About SWG", href: "/about" },
-      { label: "History", href: "/prototyping" },
-      { label: "Vision, Mission & Values", href: "/collaboration" },
-      { label: "People, Performance & Culture", href: "/handoff" },
-      { label: "How We Operate", href: "/design-systems" },
-      { label: "Publications", href: "/plugins" },
-      { label: "The Team", href: "/integrations" },
-      { label: "Partners & Affiliates", href: "/plugins" },
-      { label: "Our Global Footprint", href: "/integrations" },
+      { label: "History", href: "/history" },
+      { label: "Vision, Mission & Values", href: "/vision" },
+      { label: "People, Performance & Culture", href: "/people" },
+      { label: "How We Operate", href: "/operate" },
+      { label: "Publications", href: "/publications" },
+      { label: "The Team", href: "/team" },
+      { label: "Partners & Affiliates", href: "/partners" },
+      { label: "Our Global Footprint", href: "/footprint" },
     ],
   },
   {
     label: "Services",
     items: [
-      { label: "Digital Commerce", href: "/design" },
-      { label: "IT Consulting", href: "/prototyping" },
-      { label: "Application Service Provider", href: "/collaboration" },
-      { label: "Automation Service", href: "/handoff" },
-      { label: "Customer Experience", href: "/design-systems" },
-      { label: "Infrastructure Service", href: "/plugins" },
-      { label: "Security Solutions", href: "/integrations" },
-      { label: "Sustainability Consulting & Solutions", href: "/plugins" },
-      { label: "Bespoke Technology Innovation", href: "/integrations" },
+      { label: "Digital Commerce", href: "/service" },
+      { label: "IT Consulting", href: "/service" },
+      { label: "Application Service Provider", href: "/service" },
+      { label: "Automation Service", href: "/service" },
+      { label: "Customer Experience", href: "/service" },
+      { label: "Infrastructure Service", href: "/service" },
+      { label: "Security Solutions", href: "/security" },
+      { label: "Sustainability Consulting", href: "/service" },
+      { label: "Bespoke Innovation", href: "/service" },
     ],
   },
   {
     label: "Products",
     items: [
-      { label: "E-Immigration Portal", href: "/design" },
-      { label: "Automated Driving License Solution", href: "/prototyping" },
-      { label: "Entrust", href: "/collaboration" },
-      { label: "Membership Management Solution", href: "/handoff" },
-      { label: "Resource Planning System", href: "/design-systems" },
-      { label: "The Smart Crowdfunding Solution", href: "/plugins" },
-      { label: "Hobo", href: "/integrations" },
-      { label: "Integrated Tax Management Solution", href: "/integrations" },
-      { label: "HRMIS", href: "/integrations" },
-      { label: "Integrated Postal Management System", href: "/integrations" },
-      { label: "Souk Place", href: "/integrations" },
+      { label: "E-Immigration Portal", href: "/product" },
+      { label: "Driving License Solution", href: "/product" },
+      { label: "Entrust", href: "/entrust" },
+      { label: "Membership Management", href: "/product" },
+      { label: "Resource Planning System", href: "/product" },
+      { label: "Crowdfunding Solution", href: "/product" },
+      { label: "Hobo", href: "/hobo" },
+      { label: "Tax Management", href: "/product" },
+      { label: "HRMIS", href: "/hrmis" },
+      { label: "Postal Management", href: "/product" },
+      { label: "Souk Place", href: "/product" },
     ],
   },
 ];
@@ -79,6 +79,12 @@ const navItems002 = [
   },
 ];
 
+const handleScrollTop = () => {
+  console.log("Scrolling to top...");
+  alert("Scroll");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
@@ -87,7 +93,10 @@ export default function Header() {
     <div className="fixed w-full z-50">
       <header className="bg-shade shadow-sm sticky top-0 left-0 w-full">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 h-16 flex items-center justify-between">
-          <Link to="/">
+          <Link
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            to="/"
+          >
             <img src={icons.logo} alt="SWG Logo" className="w-28 sm:w-36" />
           </Link>
 
@@ -117,8 +126,8 @@ export default function Header() {
 
           {/* CTA button */}
           <Link
-            to="/signup"
-            className="hidden sm:inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:scale-105 transition-all duration-500 text-sm font-medium hover:bg-blue-700"
+            to="/"
+            className="hidden sm:inline-block bg-blue-500 text-shade px-4 py-2 rounded-full hover:scale-105 transition-all duration-500 text-sm font-medium hover:bg-blue-700"
           >
             Get Started
           </Link>
@@ -152,7 +161,10 @@ export default function Header() {
                   <div className="flex flex-col gap-2">
                     {nav.items.map((item) => (
                       <Link
-                        onClick={() => setIsHover(false)}
+                        onClick={() => {
+                          setIsHover(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
                         key={item.label}
                         to={item.href}
                         className="text-gray-700 flex items-center group hover:text-blue-600 text-xs transition-all duration-300 ease-in-out hover:translate-x-1"
@@ -213,7 +225,7 @@ export default function Header() {
 
             <Link
               to="/signup"
-              className="block bg-blue-600 text-white text-center py-2 rounded-full hover:bg-blue-700"
+              className="block bg-blue-600 text-shade text-center py-2 rounded-full hover:bg-blue-700"
             >
               Get Started
             </Link>

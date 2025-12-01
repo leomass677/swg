@@ -67,9 +67,9 @@ const Global = () => {
     <div className="text-shade relative overflow-hidden">
       <ScrollVideoEffect />
 
-      {/* Background Section with Enhanced Overlay */}
+      {/* Background S  */}
       <div
-        className="relative px-4 sm:px-6 lg:px-8 xl:px-12 py-16 sm:py-20 lg:py-24"
+        className="relative px-4 sm:px-6 lg:px-12 xl:px-12 py-16 sm:py-20 lg:py-24"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundPosition: "center",
@@ -78,10 +78,8 @@ const Global = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        {/* Enhanced Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-teal-500/10 to-cyan-300/20 backdrop-blur-sm z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-teal-500/10 to-blue-300/20 backdrop-blur-sm z-0"></div>
 
-        {/* Additional overlay for better text readability */}
         <div className="absolute inset-0 bg-black/10 z-0"></div>
 
         {/* Main Content Container */}
@@ -99,7 +97,7 @@ const Global = () => {
           >
             <h4 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl leading-tight sm:leading-relaxed font-light max-w-md sm:max-w-xl lg:max-w-2xl xl:max-w-3xl">
               Breaking barriers & delivering value for{" "}
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">
+              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">
                 10+ years
               </span>
               .
@@ -121,7 +119,7 @@ const Global = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2">
+                    <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-shade mb-2">
                       {stat.value}
                     </p>
                     <p className="text-sm sm:text-base lg:text-lg font-medium text-gray-200 uppercase tracking-wide">
@@ -202,7 +200,7 @@ const Global = () => {
                         transition: { duration: 0.2 },
                       }}
                     >
-                      <AvailabilityBadge className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" />
+                      <AvailabilityBadge className="cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25" />
                     </motion.div>
                   ))}
                 </div>
@@ -216,11 +214,7 @@ const Global = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-center mt-8 lg:mt-12"
-            >
-              <p className="text-sm sm:text-base text-gray-300 font-light">
-                Hover over the markers to explore our global presence
-              </p>
-            </motion.div>
+            ></motion.div>
           </motion.div>
         </motion.div>
       </div>

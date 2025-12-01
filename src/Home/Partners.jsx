@@ -24,7 +24,7 @@ const Partners = () => {
   return (
     <div className="w-full">
       {" "}
-      <div className="flex flex-col p-8 lg:px-0 gap-6 md:gap-8 lg:12 w-full max-w-[1440px] mx-auto">
+      <div className="flex flex-col p-8 px-4 sm:px-6 lg:px-12 xl:px-12 gap-6 md:gap-8   w-full max-w-[1440px] mx-auto">
         <div className="flex flex-col gap-4 justify-center items-center">
           {" "}
           <h3 className="text-3xl font-Euclid font-bold">Our Partners</h3>
@@ -39,7 +39,7 @@ const Partners = () => {
           {partner.map((item, key) => (
             <div
               key={key}
-              className="flex items-center  transition-all duration-800 hover:rounded-none ease-out bg-shade hover:bg-gray-400/40  group cursor-pointer relative overflow-hidden justify-center py-4 rounded-xl shadow-md border-white border"
+              className="flex items-center  transition-all duration-800 hover:rounded-none ease-out bg-shade hover:bg-gray-400/40  group cursor-pointer relative overflow-hidden justify-center py-4 rounded-xl shadow-md border-shade border"
             >
               <img
                 src={item.img}
